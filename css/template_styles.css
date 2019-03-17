@@ -1,0 +1,47 @@
+.panel-body {
+	padding-top: 0px !important;
+}
+
+div.baloon_wrap {
+	width: 200px;
+}
+
+.checkbox {
+	margin-top: 0px;
+}
+
+.popover {
+    display: block;
+}
+.popover .close {
+    position: absolute;
+    right: 5px;
+    top: 1px;
+}
+.btn {
+    margin-top: 10px;
+}
+.popover-content {
+	font-size: 13px;
+}
+.scrollup {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 5px;
+    right: 15px;
+    display: none;
+    text-indent: -9999px;
+    background: url('../images/arrow78.png') no-repeat;
+    background-color: #000;
+}
+
+a#delete {
+    color: green;
+    padding: 8px;
+    border: solid green 1px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}

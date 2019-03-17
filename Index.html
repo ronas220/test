@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Интерактивная карта ямочного ремонта">
+    <meta name="author" content="Администрация городского округа город Уфа Республики Башкортостан">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Интерактивная карта ямочного ремонта</title>
+
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css?1552640776" rel="stylesheet">
+    <link href="css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="css/sb-admin-2.css?1552640776" rel="stylesheet">
+    <link href="css/template_styles.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    <!-- <script src="/bitrix/templates/yama_map/js/bootstrap.min.js"></script> -->
+    
+    <!-- Подключаем Яндекс.Карта -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=fea6d11d-324d-4800-8968-a6bbef134b29&lang=ru_RU" type="text/javascript"></script>
+    <!--<script src="/bitrix/templates/yama_map/js/sb-admin-2.js?1552640776"></script>-->
+
+    <!-- <script>window.jQuery || document.write('<script src="./bitrix/templates/yama_map/js/jquery.min.js"><\/script>')</script> -->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- Navigation -->
+      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/doroga"><i class="glyphicon glyphicon-map-marker fa-fw"></i>Ямочный ремонт</a>
+          </div>
+          <!-- /.navbar-header -->
+          <div class="banners">
+            <a href="//ufacity.info" class="navbar-left"><img class="img-responsive" src="images/ufacity.png"></a>
+            <a href="//onf.ru" class="navbar-left"><img class="img-responsive" src="images/onf.png"></a>
+          </div>
+          <ul class="nav navbar-top-links navbar-right">
+            <li>
+              <a href="/doroga/profile/"><i class="glyphicon glyphicon-home"></i> Личный кабинет</a>
+            </li>
+                          <!-- /.dropdown -->
+          </ul>
+          <!-- /.navbar-top-links -->
+
+<div class="navbar-default sidebar" role="navigation">
+  <div class="sidebar-nav navbar-collapse collapse">
+    <ul class="nav" id="side-menu">
+        				<li>
+				  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6532" aria-expanded="true" aria-controls="collapse6532"><i class="glyphicon glyphicon-road fa-fw"></i> Ямы города (2019 г.)</a>
+				  <ul id="collapse6532" aria-labelledby="heading6532" class="nav nav-second-level collapse in">
+				    <li>
+				<div class='checkbox'><img src='images/need17.png' style='position: relative;width: 20px;left: -8px;bottom:1px;'><label><input type='checkbox' id='80' name='Требуется ремонт' checked='checked'>Требуется ремонт</label></div><div class='checkbox'><img src='images/accept17.png' style='position: relative;width: 20px;left: -8px;bottom:1px;'><label><input type='checkbox' id='81' name='Заявка принята' checked='checked'>Заявка принята</label></div><div class='checkbox'><img src='images/ok17.png' style='position: relative;width: 20px;left: -8px;bottom:1px;'><label><input type='checkbox' id='82' name='Ремонт выполнен' checked='checked'>Ремонт выполнен</label></div>					<!-- <div class="checkbox">
+						<img src='/bitrix/templates/yama_map/images/road.png' style='position: relative;width: 20px;left: -8px;bottom:1px;'>
+						<label><input type='checkbox' name='План' checked='checked'>Участки замены дорожного полотна в 2017 г.</label>
+					</div> -->
+				    </li>
+				  </ul>
+				</li>
+    </ul>
+
+  </div>
+  <!-- /.sidebar-collapse -->
+  <div class="container-fluid">
+    <h4><b><u>Внимание</u>:</b></h4>
+    <p>Информацию о статусе своей заявки Вы можете увидеть в <a href="/doroga/profile/">личном кабинете</a></p>
+  </div>
+  
+<br/>
+
+        <div class="col-lg-12 col-md-12">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <div class="row">
+                      <div class="col-xs-2">
+                          <i class="fa fa-th-list fa-3x"></i>
+                      </div>
+                      <div class="col-xs-10 text-right">
+                          <div class="huge">167</div>
+                          <div>Всего заявок</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+    
+
+        <div class="col-lg-12 col-md-12">
+          <div class="panel panel-green">
+              <div class="panel-heading">
+                  <div class="row">
+                      <div class="col-xs-2">
+                          <i class="fa fa-check fa-3x"></i>
+                      </div>
+                      <div class="col-xs-10 text-right">
+                          <div class="huge">28</div>
+                          <div>Ремонт выполнен</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+    
+
+        <div class="col-lg-12 col-md-12">
+          <div class="panel panel-yellow">
+              <div class="panel-heading">
+                  <div class="row">
+                      <div class="col-xs-2">
+                          <i class="fa fa-warning fa-3x"></i>
+                      </div>
+                      <div class="col-xs-10 text-right">
+                          <div class="huge">71</div>
+                          <div>Заявок принято</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+    
+
+        <div class="col-lg-12 col-md-12">
+          <div class="panel panel-red">
+              <div class="panel-heading">
+                  <div class="row">
+                      <div class="col-xs-2">
+                          <i class="fa fa-warning fa-3x"></i>
+                      </div>
+                      <div class="col-xs-10 text-right">
+                          <div class="huge">32</div>
+                          <div>Требуется ремонт</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+    
+
+        <div class="col-lg-12 col-md-12">
+          <div class="panel panel-primary">
+              <div class="panel-heading">
+                  <div class="row">
+                      <div class="col-xs-2">
+                          <i class="fa fa-times fa-3x"></i>
+                      </div>
+                      <div class="col-xs-10 text-right">
+                          <div class="huge">24</div>
+                          <div>Заявок отклонено</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+    
+
+
+</div>
+<!-- /.navbar-static-side -->
+</nav>
+
+<div id="page-wrapper" style="padding: 0;">
+  <script src="api/data.js?v=1552640776" type="text/javascript"></script>
+  <!--Подключение карты Яндекс -->
+  <div id="map">
+  	<div id="loadingDiv" class="loadingdivmobile" style="display: none; left: 50%;"></div>
+  </div>
+</div>
+<a href="#" class="scrollup">Scroll</a>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/sb-admin-2.js?1552640776"></script>
+<style>
+#loadingDiv {
+    position: absolute;
+    z-index: 1;
+    left:40%;
+    top:48%;
+    margin-top: -50px;
+}
+
+#loadingDiv ,
+#loadingDiv :after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+#loadingDiv  {
+  /* margin: 60px auto; */
+  font-size: 10px;
+  /* position: relative; */
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(0, 0, 0, 0.2);
+  border-right: 1.1em solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1.1em solid rgba(0, 0, 0, 0.2);
+  border-left: 1.1em solid #f8f8f8;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+</style>
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- FancyBox JS -->
+    <script type="text/javascript" src="js/jquery.fancybox.js"></script>
+    <!-- Add mousewheel plugin (this is optional) -->
+    <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+    <!-- Add fancyBox main JS and CSS files -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?1552640776" media="screen" />
+    <!-- Add Button helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-buttons.css?v=1.0.5" />
+    <script type="text/javascript" src="js/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <!-- Add Thumbnail helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-thumbs.css?v=1.0.7" />
+    <script type="text/javascript" src="js/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+    <!-- Add Media helper (this is optional) -->
+    <script type="text/javascript" src="js/jquery.fancybox-media.js?v=1.0.6"></script>
+    <script>
+
+    $(document).ready(function () {
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('.scrollup').fadeIn();
+            } else {
+                $('.scrollup').fadeOut();
+            }
+        });
+
+        $('.scrollup').click(function () {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 600);
+            return false;
+        });
+    });
+    </script>
+   <script>
+    function before_photos(id,iblock_id) {
+      $.ajax({
+        url: '/doroga/photos.php',
+        method: 'POST',
+        data: {element_id: id, iblock_id: iblock_id, type: "before"},                    
+        type: 'post',
+        dataType: 'json',
+        success: function(data){
+          //$( "#links" ).append('<p>asdasd</p>');
+          var i;
+          var photos = [];
+          for (i = 0; i < data.length; i++) {
+              photos[i] = "http://ufacity.info" + data[i].photo_src; 
+          }
+
+      $.fancybox(photos, {loop: false});
+
+         // var gallery = blueimp.Gallery(photos);
+             } 
+        }); 
+    }
+
+    function after_photos(id,iblock_id) {
+      $.ajax({
+        url: '/doroga/photos.php',
+        method: 'POST',
+        data: {element_id: id, iblock_id: iblock_id, type: "after"},                    
+        type: 'post',
+        dataType: 'json',
+        success: function(data){
+          var i;
+          var photos = [];
+          for (i = 0; i < data.length; i++) {
+              photos[i] = "http://ufacity.info" + data[i].photo_src; 
+          }
+
+          $.fancybox(photos, {loop: false});
+          //var gallery = blueimp.Gallery(photos);
+             } 
+        }); 
+    } 
+	//auth
+	$('.form_auth .bx-auth-serv-icons a').removeAttr('onclick');
+	var $ok=$('#bx_auth_serv_formOdnoklassniki a').attr('onclick'),$vk=$('#bx_auth_serv_formVKontakte a').attr('onclick');
+	$('.form_auth .odnoklassniki').attr('onclick',$ok);
+	$('.form_auth .vkontakte').attr('onclick',$vk);
+	//auth
+   </script>
+
+</div>
+ 
+</body>
+</html>
