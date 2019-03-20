@@ -2,6 +2,46 @@
   "need": {
       "type": "FeatureCollection",
       "features": [
+        {
+            "type": "Feature",
+            "id": "315346",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "56.0932",
+                    "54.2912"
+                ]
+            },
+            "properties": {
+                "iconContent": "<p class=\"fa fa-exclamation\"></p>",
+                "balloonContentHeader": "Заявка №4",
+                "balloonContent": "<b>Ф.И.О.:</b><p>Арсланова Фануза Фаритовна</p><b>Местоположение ямы:</b><p>Ул. Воробьева</p><b>Описание:</b><p>Полное отсутствие дорожного покрытия. Непроходимая для машин и пешеходов улица. Требуется срочная укладка асфальта. </p><b>Статус:</b><p>Требуется ремонт</p><button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"before_photos(315341,253);\"><i class=\"glyphicon glyphicon-picture\"></i> Фото ямы</button>",
+                "hintContent": "Ул. Воробьева"
+            },
+            "options": {
+                "preset": "islands#redCircleIcon"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": "315347",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "56.0813",
+                    "54.2957"
+                ]
+            },
+            "properties": {
+                "iconContent": "<p class=\"fa fa-exclamation\"></p>",
+                "balloonContentHeader": "Заявка №3",
+                "balloonContent": "<b>Ф.И.О.:</b><p>Хасаньянов Сэмил Илдарович</p><b>Местоположение ямы:</b><p>перекресток ул. Мирная - переулок Зодчих</p><b>Описание:</b><p>Требуется поднятие земляного полотна (отсыпка) на подтопляемом участке дороги пер. Зодчих (перекресток ул. Мирная - переулок Зодчих)</p><b>Статус:</b><p>Требуется ремонт</p><button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"before_photos(315341,253);\"><i class=\"glyphicon glyphicon-picture\"></i> Фото ямы</button>",
+                "hintContent": "перекресток ул. Мирная - переулок Зодчих"
+            },
+            "options": {
+                "preset": "islands#redCircleIcon"
+            }
+        },
           {
               "type": "Feature",
               "id": "315345",
