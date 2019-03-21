@@ -319,6 +319,7 @@ function validateForm() {
     <script type="text/javascript" src="js/jquery.fancybox-media.js?v=1.0.6"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-storage.js"></script>
     <script>
         // Initialize Firebase
         var config = {
@@ -331,11 +332,18 @@ function validateForm() {
         };
         firebase.initializeApp(config);
         var database = firebase.database();
+        var storage = firebase.storage();
       </script>
     <script>
 function validateForm() { // отправку формы делать тут
-
-  firebase.database().ref('neftekamsk/' + Math.random().toString(36).substr(2, 9)).set({
+var tm = new Date();
+var resTxt = formatDate(tm);
+resTxt += "_" + tm.getHours() + ":" + tm.getMinutes() + ":" + tm.getSeconds()+ "_";
+      // var userLastOnlineRef = firebase.database().ref("users/joe/lastOnline");
+      //userLastOnlineRef.onDisconnect().set(firebase.database.ServerValue.TIMESTAMP);
+      //var timestamp = database.ServerValue.TIMESTAMP;
+  var UID = (resTxt + Math.random().toString(36).substr(2, 5)).toUpperCase();
+  firebase.database().ref('neftekamsk/' + UID).set({
     
                 type: "Feature",
                 id: "315341",
@@ -343,7 +351,7 @@ function validateForm() { // отправку формы делать тут
                     type: "Point",
                     coordinates: [
                     document.getElementById('LATITUDE').value,
-                    document.getElementById('LONGITUDE').value
+                     document.getElementById('LONGITUDE').value
                     ]
                 },
                 properties: {
@@ -357,6 +365,61 @@ function validateForm() { // отправку формы делать тут
                 }
             
   });
+// File or Blob named mountains.jpg
+var file = document.getElementById('PROPERTY_FILE_1188_0').files[0];
+//9173529688
+// Create the file metadata
+var metadata = {
+  contentType: 'image/jpeg'
+};
+var storageRef = storage.ref();
+//var tangRef = storageRef.child('images/Tang.png');
+
+// Upload file and metadata to the object 'images/mountains.jpg'
+var uploadTask = storageRef.child('neftekamsk/' + UID+ '-before.jpg').put(file, metadata);
+
+// Listen for state changes, errors, and completion of the upload.
+uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+  function(snapshot) {
+    // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+    var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+    console.log('Upload is ' + progress + '% done');
+    switch (snapshot.state) {
+      case firebase.storage.TaskState.PAUSED: // or 'paused'
+        console.log('Upload is paused');
+        break;
+      case firebase.storage.TaskState.RUNNING: // or 'running'
+        console.log('Upload is running');
+        break;
+    }
+  }, function(error) {
+
+  // A full list of error codes is available at
+  // https://firebase.google.com/docs/storage/web/handle-errors
+  switch (error.code) {
+    case 'storage/unauthorized':
+      // User doesn't have permission to access the object
+      break;
+
+    case 'storage/canceled':
+      // User canceled the upload
+      break;
+
+    //...
+
+    case 'storage/unknown':
+      // Unknown error occurred, inspect error.serverResponse
+      break;
+  }
+}, function() {
+  // Upload completed successfully, now we can get the download URL
+  uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+    console.log('File available at', downloadURL);
+  });
+});
+
+
+
   $('#modalSend').modal();
   //window.opener.location.reload();
   //document.location.href = "index.html";
@@ -409,6 +472,17 @@ document.forms[0].onsubmit = validateForm
              } 
         }); 
     }
+    function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+
+    return [year, month, day].join('-');
+}
 
     function after_photos(id,iblock_id) {
       $.ajax({
