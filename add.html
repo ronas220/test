@@ -34,7 +34,57 @@
 <script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
 <script type="text/javascript">(window.BX||top.BX).message({'PULL_OLD_REVISION':'Для продолжения корректной работы с сайтом необходимо перезагрузить страницу.'});</script>
 <script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'UFACITY','SERVER_TZ_OFFSET':'18000','SITE_ID':'ru','SITE_DIR':'/','USER_ID':'113599','SERVER_TIME':'1552838717','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'0463940b5c91e7e6cc1024da96533f49'});</script>
-
+<style>
+    #loadingDiv {
+        position: absolute;
+        z-index: 1;
+        left:40%;
+        top:48%;
+        margin-top: -50px;
+    }
+    
+    #loadingDiv ,
+    #loadingDiv :after {
+      border-radius: 50%;
+      width: 10em;
+      height: 10em;
+    }
+    #loadingDiv  {
+      /* margin: 60px auto; */
+      font-size: 10px;
+      /* position: relative; */
+      text-indent: -9999em;
+      border-top: 1.1em solid rgba(0, 0, 0, 0.2);
+      border-right: 1.1em solid rgba(0, 0, 0, 0.2);
+      border-bottom: 1.1em solid rgba(0, 0, 0, 0.2);
+      border-left: 1.1em solid #f8f8f8;
+      -webkit-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-animation: load8 1.1s infinite linear;
+      animation: load8 1.1s infinite linear;
+    }
+    @-webkit-keyframes load8 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes load8 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    </style>
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -45,6 +95,7 @@
 
   <body>
     <div id="wrapper">
+        <div id="loadingDiv" class="loadingdivmobile" style="display: none; left: 50%;"></div>
       <!-- Navigation -->
       <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
           <div class="navbar-header">
@@ -336,12 +387,10 @@ function validateForm() {
       </script>
     <script>
 function validateForm() { // отправку формы делать тут
+  $('#loadingDiv').show();
 var tm = new Date();
 var resTxt = formatDate(tm);
 resTxt += "_" + tm.getHours() + ":" + tm.getMinutes() + ":" + tm.getSeconds()+ "_";
-      // var userLastOnlineRef = firebase.database().ref("users/joe/lastOnline");
-      //userLastOnlineRef.onDisconnect().set(firebase.database.ServerValue.TIMESTAMP);
-      //var timestamp = database.ServerValue.TIMESTAMP;
   var UID = (resTxt + Math.random().toString(36).substr(2, 5)).toUpperCase();
   firebase.database().ref('neftekamsk/' + UID).set({
     
@@ -365,6 +414,8 @@ resTxt += "_" + tm.getHours() + ":" + tm.getMinutes() + ":" + tm.getSeconds()+ "
                 }
             
   });
+  var userLastOnlineRef = firebase.database().ref('neftekamsk/' + UID + "/TIMESTAMP");
+      userLastOnlineRef.onDisconnect().set(firebase.database.ServerValue.TIMESTAMP);
 // File or Blob named mountains.jpg
 var file = document.getElementById('PROPERTY_FILE_1188_0').files[0];
 //9173529688
@@ -415,12 +466,14 @@ uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
   // Upload completed successfully, now we can get the download URL
   uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
     console.log('File available at', downloadURL);
+    $('#loadingDiv').hide();
+    $('#modalSend').modal();
   });
 });
 
 
 
-  $('#modalSend').modal();
+
   //window.opener.location.reload();
   //document.location.href = "index.html";
     return false
