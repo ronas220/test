@@ -106,7 +106,7 @@
                           <i class="fa fa-th-list fa-3x"></i>
                       </div>
                       <div class="col-xs-10 text-right">
-                          <div class="huge">17</div>
+                          <div class="huge">7</div>
                           <div>Всего заявок</div>
                       </div>
                   </div>
@@ -144,7 +144,7 @@
                           <i class="fa fa-warning fa-3x"></i>
                       </div>
                       <div class="col-xs-10 text-right">
-                          <div class="huge">17</div>
+                          <div class="huge">6</div>
                           <div>Заявок принято</div>
                       </div>
                   </div>
@@ -306,7 +306,7 @@
         record.properties.balloonContent="<b>Ф.И.О.:</b><p>" + record.properties.balloonContentHeader + 
             "</p><b>Местоположение ямы:</b><p>"+  record.properties.balloonContent +
             "</p><b>Описание:</b><p>"+  record.properties.hintContent +
-            "</p><b>Статус:</b><p>Заявка принята</p><button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"before_photos('" + key +"',253);\"><i class=\"glyphicon glyphicon-picture\"></i> Фото ямы</button>"
+            "</p><b>Статус:</b><p>Заявка принята</p><button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"before_photos('"+ key +"')\"><i class=\"glyphicon glyphicon-picture\"></i> Фото ямы</button>"
             record.properties.balloonContentHeader = "Заявка"
             record.properties.hintContent=hintContent
             result.push(record);
@@ -315,21 +315,7 @@
     objectManager_accept.removeAll();
     objectManager_accept.add(myJsonString);
 
-    //var table=parse(data);
 });
-
-  /*      ref = database.ref('neftekamsk');
-
-        var commentsRef = ref.once ('value',  function (snapshot )  { 
-            snapshot .forEach ( function (childSnapshot )  { 
-                var childKey = childSnapshot.key; 
-                var childData = childSnapshot.val();
-                //...
-              });
-            });*/
-
-
-
     $(document).ready(function () {
 
         $(window).scroll(function () {
@@ -349,31 +335,20 @@
     });
     </script>
    <script>
-    function before_photos(id,iblock_id) {
-    $("[data-fancybox]").fancybox({
-  loop : false,
-  onInit: function( instance ) {
 
-    instance.createGroup({
-      type : 'image',
-      src  : "https://firebasestorage.googleapis.com/v0/b/neftekamsk-71979.appspot.com/o/Neftekamsk%2" + id + "-before.jpg?alt=media",
-      opts : {
-        caption : "My Caption 1",
-      }
-    });
-
-    // second caption
-
-    instance.createGroup({
-      type : 'image',
-      src  : "https://firebasestorage.googleapis.com/v0/b/neftekamsk-71979.appspot.com/o/Neftekamsk%2" + id + "-before.jpg?alt=media",
-      opts : {
-        caption : "My Caption 2",
-      }
-    });
-
-  }
- });
+    function before_photos(id)  {
+      id=id.replace(":","%3A").replace(":","%3A")
+  $.fancybox({
+     /*autoScale: true,
+     transitionIn: 'elastic',
+     transitionOut: 'elastic',
+     speedIn: 500,
+     speedOut: 300,
+     autoDimensions: true,
+     centerOnScroll: true,*/
+     loop: false,
+     href : "https://firebasestorage.googleapis.com/v0/b/neftekamsk-71979.appspot.com/o/neftekamsk%2F" + id + "-before.jpg?alt=media"
+  });
 }
 
 

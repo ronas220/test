@@ -390,7 +390,7 @@ function validateForm() { // отправку формы делать тут
   $('#loadingDiv').show();
 var tm = new Date();
 var resTxt = formatDate(tm);
-resTxt += "_" + tm.getHours() + ":" + tm.getMinutes() + ":" + tm.getSeconds()+ "_";
+resTxt += "_" + tm.getHours() + "-" + tm.getMinutes() + "-" + tm.getSeconds()+ "_";
   var UID = (resTxt + Math.random().toString(36).substr(2, 5)).toUpperCase();
   firebase.database().ref('neftekamsk/' + UID).set({
     
