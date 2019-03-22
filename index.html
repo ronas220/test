@@ -276,7 +276,59 @@
     <script type="text/javascript" src="js/jquery.fancybox-thumbs.js?v=1.0.7"></script>
     <!-- Add Media helper (this is optional) -->
     <script type="text/javascript" src="js/jquery.fancybox-media.js?v=1.0.6"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-storage.js"></script>
     <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyCOvHxFLYsbHclUwuEo1sfA77b8HGW6VxU",
+          authDomain: "neftekamsk-71979.firebaseapp.com",
+          databaseURL: "https://neftekamsk-71979.firebaseio.com",
+          projectId: "neftekamsk-71979",
+          storageBucket: "neftekamsk-71979.appspot.com",
+          messagingSenderId: "1091543827699"
+        };
+        firebase.initializeApp(config);
+        var database = firebase.database();
+        var storage = firebase.storage();
+
+        var collection= database.ref('neftekamsk');
+        collection.once("value", function(data){
+    var source = data.val();
+    var result = [];
+    var hintContent;
+    for (var key in source){
+        var record = source[key];
+        record.id = key;
+        hintContent=record.properties.balloonContent
+        record.options.preset="islands#yellowCircleIcon"
+        record.properties.balloonContent="<b>Ф.И.О.:</b><p>" + record.properties.balloonContentHeader + 
+            "</p><b>Местоположение ямы:</b><p>"+  record.properties.balloonContent +
+            "</p><b>Описание:</b><p>"+  record.properties.hintContent +
+            "</p><b>Статус:</b><p>Заявка принята</p><button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"before_photos('" + key +"',253);\"><i class=\"glyphicon glyphicon-picture\"></i> Фото ямы</button>"
+            record.properties.balloonContentHeader = "Заявка"
+            record.properties.hintContent=hintContent
+            result.push(record);
+    }
+    var myJsonString = JSON.stringify(result);
+    objectManager_accept.removeAll();
+    objectManager_accept.add(myJsonString);
+
+    //var table=parse(data);
+});
+
+  /*      ref = database.ref('neftekamsk');
+
+        var commentsRef = ref.once ('value',  function (snapshot )  { 
+            snapshot .forEach ( function (childSnapshot )  { 
+                var childKey = childSnapshot.key; 
+                var childData = childSnapshot.val();
+                //...
+              });
+            });*/
+
+
 
     $(document).ready(function () {
 
@@ -298,26 +350,32 @@
     </script>
    <script>
     function before_photos(id,iblock_id) {
-      $.ajax({
-        url: '/doroga/photos.php',
-        method: 'POST',
-        data: {element_id: id, iblock_id: iblock_id, type: "before"},                    
-        type: 'post',
-        dataType: 'json',
-        success: function(data){
-          //$( "#links" ).append('<p>asdasd</p>');
-          var i;
-          var photos = [];
-          for (i = 0; i < data.length; i++) {
-              photos[i] = "http://ufacity.info" + data[i].photo_src; 
-          }
+    $("[data-fancybox]").fancybox({
+  loop : false,
+  onInit: function( instance ) {
 
-      $.fancybox(photos, {loop: false});
+    instance.createGroup({
+      type : 'image',
+      src  : "https://firebasestorage.googleapis.com/v0/b/neftekamsk-71979.appspot.com/o/Neftekamsk%2" + id + "-before.jpg?alt=media",
+      opts : {
+        caption : "My Caption 1",
+      }
+    });
 
-         // var gallery = blueimp.Gallery(photos);
-             } 
-        }); 
-    }
+    // second caption
+
+    instance.createGroup({
+      type : 'image',
+      src  : "https://firebasestorage.googleapis.com/v0/b/neftekamsk-71979.appspot.com/o/Neftekamsk%2" + id + "-before.jpg?alt=media",
+      opts : {
+        caption : "My Caption 2",
+      }
+    });
+
+  }
+ });
+}
+
 
     function after_photos(id,iblock_id) {
       $.ajax({

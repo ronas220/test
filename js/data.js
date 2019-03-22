@@ -255,10 +255,13 @@ function isEmpty(obj) {
     return true;
 }
 
-    $('#loadingDiv').show();
+
+    /*$('#loadingDiv').show();
     $.ajax({
         url: "doroga/api/data/data.json",
         complete: function(){
+
+
           $('#loadingDiv').hide();
         }
     }).done(function(data1) {
@@ -279,5 +282,5 @@ function isEmpty(obj) {
           objectManager_ok.add(data['ok']);
     	}
         //objectManager_upr.add(data['upr']);
-    }); 
+    }); */
 }
