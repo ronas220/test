@@ -106,7 +106,7 @@
                           <i class="fa fa-th-list fa-3x"></i>
                       </div>
                       <div class="col-xs-10 text-right">
-                          <div class="huge">18</div>
+                          <div class="huge"></div>
                           <div>Всего заявок</div>
                       </div>
                   </div>
@@ -125,7 +125,7 @@
                           <i class="fa fa-check fa-3x"></i>
                       </div>
                       <div class="col-xs-10 text-right">
-                          <div class="huge">1</div>
+                          <div class="huge"></div>
                           <div>Ремонт выполнен</div>
                       </div>
                   </div>
@@ -144,7 +144,7 @@
                           <i class="fa fa-warning fa-3x"></i>
                       </div>
                       <div class="col-xs-10 text-right">
-                          <div class="huge">18</div>
+                          <div class="huge"></div>
                           <div>Заявок принято</div>
                       </div>
                   </div>
@@ -163,7 +163,7 @@
                           <i class="fa fa-warning fa-3x"></i>
                       </div>
                       <div class="col-xs-10 text-right">
-                          <div class="huge">18</div>
+                          <div class="huge"></div>
                           <div>Требуется ремонт</div>
                       </div>
                   </div>
@@ -182,7 +182,7 @@
                           <i class="fa fa-times fa-3x"></i>
                       </div>
                       <div class="col-xs-10 text-right">
-                          <div class="huge">2</div>
+                          <div class="huge"></div>
                           <div>Заявок отклонено</div>
                       </div>
                   </div>
@@ -292,13 +292,15 @@
         firebase.initializeApp(config);
         var database = firebase.database();
         var storage = firebase.storage();
-
+        $('#loadingDiv').show();
         var collection= database.ref('neftekamsk');
         collection.once("value", function(data){
     var source = data.val();
     var result = [];
     var hintContent;
+    var i=0;
     for (var key in source){
+      i+=1;
         var record = source[key];
         record.id = key;
         hintContent=record.properties.balloonContent
@@ -314,7 +316,13 @@
     var myJsonString = JSON.stringify(result);
     objectManager_accept.removeAll();
     objectManager_accept.add(myJsonString);
+    document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(4) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML=i;
+    document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(6) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML=i;
+    document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(5) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML=1;
+    document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(7) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML=1;
+    document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(8) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML=1;
 
+    $('#loadingDiv').hide();
 });
     $(document).ready(function () {
 
