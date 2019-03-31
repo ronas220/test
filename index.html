@@ -295,34 +295,79 @@
         $('#loadingDiv').show();
         var collection= database.ref('neftekamsk');
         collection.once("value", function(data){
-    var source = data.val();
-    var result = [];
-    var hintContent;
-    var i=0;
-    for (var key in source){
-      i+=1;
-        var record = source[key];
-        record.id = key;
-        hintContent=record.properties.balloonContent
-        record.options.preset="islands#yellowCircleIcon"
-        record.properties.balloonContent="<b>Ф.И.О.:</b><p>" + record.properties.balloonContentHeader + 
-            "</p><b>Местоположение ямы:</b><p>"+  record.properties.balloonContent +
-            "</p><b>Описание:</b><p>"+  record.properties.hintContent +
-            "</p><b>Статус:</b><p>Заявка принята</p><button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"before_photos('"+ key +"')\"><i class=\"glyphicon glyphicon-picture\"></i> Фото ямы</button>"
-            record.properties.balloonContentHeader = "Заявка"
-            record.properties.hintContent=hintContent
-            result.push(record);
-    }
-    var myJsonString = JSON.stringify(result);
-    objectManager_accept.removeAll();
-    objectManager_accept.add(myJsonString);
-    document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(4) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML=i;
-    document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(6) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML=i;
-    document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(5) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML=1;
-    document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(7) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML=1;
-    document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(8) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML=1;
+          var source = data.val();
+          var object_ok = [];
+          var object_accept = [];
+          var object_need = [];
+          var hintContent;
+          var key;
+          var i_ok = 0;
+          var i_accept = 0;
+          var i_need = 0;
+          for (var key in source) {
 
-    $('#loadingDiv').hide();
+            var record = source[key];
+            record.id = key;
+            record.rr = ("bar", { myType: "test", count: 40 });
+            hintContent = record.properties.balloonContent;
+            switch (record.status) {
+              case "need":
+                record.options.preset = "islands#redCircleIcon";
+                record.properties.balloonContent = "<b>Ф.И.О.:</b><p>" + record.properties.balloonContentHeader +
+                  "</p><b>Местоположение ямы:</b><p>" + record.properties.balloonContent +
+                  "</p><b>Описание:</b><p>" + record.properties.hintContent +
+                  "</p><b>Статус:</b><p>Требуется ремонт</p><button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"before_photos('" + key +
+                  "')\"><i class=\"glyphicon glyphicon-picture\"></i> Фото ямы</button>"
+                break;
+              case "ok":
+                record.options.preset = "islands#greenGlyphCircleIcon";
+                record.options.iconGlyph = "ok"
+                record.properties.balloonContent = "<b>Ф.И.О.:</b><p>" + record.properties.balloonContentHeader +
+                  "</p><b>Местоположение ямы:</b><p>" + record.properties.balloonContent +
+                  "</p><b>Описание:</b><p>" + record.properties.hintContent +
+                  "</p><b>Статус:</b><p>Ремонт выполнен</p><button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"before_photos('" + key +
+                  "')\"><i class=\"glyphicon glyphicon-picture\"></i> Фото ямы</button><button type=\"button\" class=\"btn btn-success btn-sm\" onclick=\"after_photos('" + key +
+                  "')\"><i class=\"glyphicon glyphicon-picture\"><\/i> Ремонт выполнен<\/button>"
+                break;
+              default:
+                record.options.preset = "islands#yellowCircleIcon";
+                record.properties.balloonContent = "<b>Ф.И.О.:</b><p>" + record.properties.balloonContentHeader +
+                  "</p><b>Местоположение ямы:</b><p>" + record.properties.balloonContent +
+                  "</p><b>Описание:</b><p>" + record.properties.hintContent +
+                  "</p><b>Статус:</b><p>Заявка принята</p><button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"before_photos('" + key +
+                  "')\"><i class=\"glyphicon glyphicon-picture\"></i> Фото ямы</button>"
+            }
+            record.properties.balloonContentHeader = "Заявка";
+            record.properties.hintContent = hintContent
+            switch (record.status) {
+              case "need":
+              i_need=i_need+1;
+                object_need.push(record);
+                break;
+              case "ok":
+              i_ok=i_ok+1;
+                object_ok.push(record);
+                console.log(object_ok.value);
+                break;
+              default:
+              i_accept=i_accept+1;
+                object_accept.push(record);
+            }
+          }
+          //var myJsonString = JSON.stringify(object_accept);
+          objectManager_accept.removeAll();
+          objectManager_accept.add(JSON.stringify(object_accept));
+          objectManager_ok.removeAll();
+          objectManager_ok.add(JSON.stringify(object_ok));
+          objectManager_need.removeAll();
+          objectManager_need.add(JSON.stringify(object_need));
+
+          document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(4) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML = i_ok+i_need+i_accept;
+          document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(6) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML = i_accept;
+          document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(5) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML = i_ok;
+          document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(7) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML = i_need;
+          document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(8) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML = 0;
+          $('#loadingDiv').hide();
 });
     $(document).ready(function () {
 
@@ -360,25 +405,20 @@
 }
 
 
-    function after_photos(id,iblock_id) {
-      $.ajax({
-        url: '/doroga/photos.php',
-        method: 'POST',
-        data: {element_id: id, iblock_id: iblock_id, type: "after"},                    
-        type: 'post',
-        dataType: 'json',
-        success: function(data){
-          var i;
-          var photos = [];
-          for (i = 0; i < data.length; i++) {
-              photos[i] = "http://ufacity.info" + data[i].photo_src; 
-          }
-
-          $.fancybox(photos, {loop: false});
-          //var gallery = blueimp.Gallery(photos);
-             } 
-        }); 
-    } 
+function after_photos(id) {
+        id = id.replace(":", "%3A").replace(":", "%3A")
+        $.fancybox({
+          /*autoScale: true,
+          transitionIn: 'elastic',
+          transitionOut: 'elastic',
+          speedIn: 500,
+          speedOut: 300,
+          autoDimensions: true,
+          centerOnScroll: true,*/
+          loop: false,
+          href: "https://firebasestorage.googleapis.com/v0/b/neftekamsk-71979.appspot.com/o/neftekamsk%2F" + id + "-after.jpg?alt=media"
+        });
+      }
 	//auth
 	$('.form_auth .bx-auth-serv-icons a').removeAttr('onclick');
 	var $ok=$('#bx_auth_serv_formOdnoklassniki a').attr('onclick'),$vk=$('#bx_auth_serv_formVKontakte a').attr('onclick');
