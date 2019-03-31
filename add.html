@@ -157,7 +157,9 @@ function validateForm() {
     ext = a[a.length-1].toUpperCase();  
     var x = document.forms["iblock_add"]["PROPERTY[1183][0]"].value;
     if (x == "") {
-        $('#myModal').modal();
+        $("#errTerritory").modal();
+        //if(!$("#errTerritory").parent().is('body'))
+        //$("#errTerritory").appendTo("body");
         return false;
        
     } else if (extlist.indexOf(ext) == "-1") {
@@ -171,27 +173,6 @@ function validateForm() {
     }
 }
 </script>
-
-<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-  <div class="modal-dialog modal-sm" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="gridSystemModalLabel">Ошибка</h4>
-      </div>
-      <div class="modal-body">
-        <div id="error" class="alert alert-danger" role="alert">
-      Поставьте отметку на карте в пределах городского округа город Нефтекамск.
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script src="js/district.js?v=1552838717" type="text/javascript"></script>
 
 <div class="modal fade bs-example-modal-sm" id="errTerritory" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
   <div class="modal-dialog modal-sm" role="document">
@@ -330,7 +311,7 @@ function validateForm() {
 </div>  
 <!-- Modal -->
 <div class="modal fade bs-example-modal-lg" id="modalSend" tabindex="-1" role="dialog" aria-labelledby="AgreeModal">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog modal-sm" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle">Сообщение</h5>
@@ -352,6 +333,7 @@ function validateForm() {
   </div>
 
 </div>
+
     <!-- Bootstrap core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <!-- FancyBox JS -->
@@ -368,6 +350,7 @@ function validateForm() {
     <script type="text/javascript" src="js/jquery.fancybox-thumbs.js?v=1.0.7"></script>
     <!-- Add Media helper (this is optional) -->
     <script type="text/javascript" src="js/jquery.fancybox-media.js?v=1.0.6"></script>
+    <script src="js/district.js?v=1552838717" type="text/javascript"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-storage.js"></script>
@@ -386,14 +369,15 @@ function validateForm() {
         var storage = firebase.storage();
       </script>
     <script>
-function validateForm() { // отправку формы делать тут
+function SendInfo() { // отправку формы делать тут
+if (validateForm()==false){return false}
   $('#loadingDiv').show();
 var tm = new Date();
 var resTxt = formatDate(tm);
 resTxt += "_" + tm.getHours() + "-" + tm.getMinutes() + "-" + tm.getSeconds()+ "_";
   var UID = (resTxt + Math.random().toString(36).substr(2, 5)).toUpperCase();
   firebase.database().ref('neftekamsk/' + UID).set({
-    
+                TIMESTAMP: firebase.database.ServerValue.TIMESTAMP,
                 type: "Feature",
                 id: "315341",
                 geometry: {
@@ -414,8 +398,8 @@ resTxt += "_" + tm.getHours() + "-" + tm.getMinutes() + "-" + tm.getSeconds()+ "
                 }
             
   });
-  var userLastOnlineRef = firebase.database().ref('neftekamsk/' + UID + "/TIMESTAMP");
-      userLastOnlineRef.onDisconnect().set(firebase.database.ServerValue.TIMESTAMP);
+  //var userLastOnlineRef = firebase.database().ref('neftekamsk/' + UID + "/TIMESTAMP");
+  //    userLastOnlineRef.onDisconnect().set(firebase.database.ServerValue.TIMESTAMP);
 // File or Blob named mountains.jpg
 var file = document.getElementById('PROPERTY_FILE_1188_0').files[0];
 //9173529688
@@ -483,7 +467,7 @@ $('#modalSend').on('hidden.bs.modal', function() {
   document.location.href = "index.html";
 })
 
-document.forms[0].onsubmit = validateForm
+document.forms[0].onsubmit = SendInfo
 
     $(document).ready(function () {
 
