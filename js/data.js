@@ -4,7 +4,7 @@ ymaps.ready(init);
     var myPlacemark;   
     var Collection= {}; 
     //var enStatus = ['Требуется ремонт','Заявка принята','Ремонт выполнен','План','Направлено в управляющую компанию'];
-    var enStatus = ['Требуется ремонт','Заявка принята','Ремонт выполнен','План'];
+    var enStatus = ['Требуется ремонт','Заявка принята','Ремонт выполнен','Заявка отклонена'];
 
     myMap = new ymaps.Map("map", {
       //center: [54.760342161262045,56.01704224529052],
@@ -197,6 +197,11 @@ ymaps.ready(init);
       gridSize: 32
     });
 
+    objectManager_reject = new ymaps.ObjectManager({
+      clusterize: true,
+      gridSize: 32
+    });
+    
     /* objectManager_upr = new ymaps.ObjectManager({
       clusterize: true,
       gridSize: 32
@@ -210,7 +215,7 @@ ymaps.ready(init);
         myMap.geoObjects.add(Collection[enStatus[i]]);
       }
 
-
+    objectManager_reject.clusters.options.set('preset', 'islands#blueClusterIcons');
     objectManager_need.clusters.options.set('preset', 'islands#redClusterIcons');
     objectManager_accept.clusters.options.set('preset', 'islands#yellowClusterIcons');
     objectManager_ok.clusters.options.set('preset', 'islands#greenClusterIcons');
@@ -224,6 +229,7 @@ ymaps.ready(init);
     Collection['Требуется ремонт'].add(objectManager_need);
     Collection['Заявка принята'].add(objectManager_accept);
     Collection['Ремонт выполнен'].add(objectManager_ok);
+    Collection['Заявка отклонена'].add(objectManager_reject);
     //Collection['Направлено в управляющую компанию'].add(objectManager_upr);
 
     function Collection_Hide(cat) {
