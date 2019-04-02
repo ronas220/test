@@ -97,6 +97,10 @@
                   <div class='checkbox'><img src='images/ok17.png'
                       style='position: relative;width: 20px;left: -8px;bottom:1px;'><label><input type='checkbox'
                         id='82' name='Ремонт выполнен' checked='checked'>Ремонт выполнен</label></div>
+                  <div class='checkbox'><img src='images/reject17.png'
+                      style='position: relative;width: 20px;left: -8px;bottom:1px;'><label><input type='checkbox'
+                        id='82' name='Заявка отклонена' checked='checked'>Заявка отклонена</label></div>
+
                   <!-- <div class="checkbox">
 						<img src='/bitrix/templates/yama_map/images/road.png' style='position: relative;width: 20px;left: -8px;bottom:1px;'>
 						<label><input type='checkbox' name='План' checked='checked'>Участки замены дорожного полотна в 2017 г.</label>
@@ -108,10 +112,10 @@
 
         </div>
         <!-- /.sidebar-collapse -->
-        <div class="container-fluid">
+        <!--div class="container-fluid">
           <h4><b><u>Внимание</u>:</b></h4>
           <p>Информацию о статусе своей заявки Вы можете увидеть в <a href="/">личном кабинете</a></p>
-        </div>
+        </div-->
 
         <br />
 
@@ -123,7 +127,7 @@
                   <i class="fa fa-th-list fa-3x"></i>
                 </div>
                 <div class="col-xs-10 text-right">
-                  <div class="huge">7</div>
+                  <div class="huge">0</div>
                   <div>Всего заявок</div>
                 </div>
               </div>
@@ -142,7 +146,7 @@
                   <i class="fa fa-check fa-3x"></i>
                 </div>
                 <div class="col-xs-10 text-right">
-                  <div class="huge">1</div>
+                  <div class="huge">0</div>
                   <div>Ремонт выполнен</div>
                 </div>
               </div>
@@ -161,7 +165,7 @@
                   <i class="fa fa-warning fa-3x"></i>
                 </div>
                 <div class="col-xs-10 text-right">
-                  <div class="huge">6</div>
+                  <div class="huge">0</div>
                   <div>Заявок принято</div>
                 </div>
               </div>
@@ -180,7 +184,7 @@
                   <i class="fa fa-warning fa-3x"></i>
                 </div>
                 <div class="col-xs-10 text-right">
-                  <div class="huge">6</div>
+                  <div class="huge">0</div>
                   <div>Требуется ремонт</div>
                 </div>
               </div>
@@ -199,7 +203,7 @@
                   <i class="fa fa-times fa-3x"></i>
                 </div>
                 <div class="col-xs-10 text-right">
-                  <div class="huge">2</div>
+                  <div class="huge">0</div>
                   <div>Заявок отклонено</div>
                 </div>
               </div>
@@ -352,6 +356,30 @@
       </div>
     </div>
 
+    <!-- Modal HTML -->
+    <div id="modalreject" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Изменить на: Отклонить заявку?</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Комментарий</label>
+              <input type="text" id="komment" class="form-control" autofocus>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="rejectbutton" onclick="sendreject()"
+              data-dismiss="modal">Изменить</button>
+            <!--input type="submit" class="btn btn-primary pull-right" value="Изменить" data-dismiss="modal" -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal ends here--->
+
     <div id="page-wrapper" style="padding: 0;">
       <script src="js/data.js?v=1552640776" type="text/javascript"></script>
       <!--Подключение карты Яндекс -->
@@ -461,11 +489,13 @@
           var object_ok = [];
           var object_accept = [];
           var object_need = [];
+          var object_reject = [];
           var hintContent;
           var key;
           var i_ok = 0;
           var i_accept = 0;
           var i_need = 0;
+          var i_reject = 0;
           for (var key in source) {
 
             var record = source[key];
@@ -475,53 +505,73 @@
             switch (record.status) {
               case "need":
                 record.options.preset = "islands#redCircleIcon";
-                record.properties.balloonContent = "<b>Ф.И.О.:</b><p>" + record.properties.balloonContentHeader +
+                record.properties.balloonContentBody = "<b>Ф.И.О.:</b><p>" + record.properties.balloonContentHeader +
                   "</p><b>Местоположение ямы:</b><p>" + record.properties.balloonContent +
                   "</p><b>Описание:</b><p>" + record.properties.hintContent +
                   "</p><b>Статус:</b><p>Требуется ремонт</p><button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"before_photos('" + key +
                   "')\"><i class=\"glyphicon glyphicon-picture\"></i> Фото ямы</button>"
+                if (typeof record.text != "undefined" || record.text == "") { record.properties.balloonContentBody = record.properties.balloonContentBody + "</p><b>Комментарий:</b><p>" + record.text }
                 break;
               case "ok":
                 record.options.preset = "islands#greenGlyphCircleIcon";
                 record.options.iconGlyph = "ok"
-                record.properties.balloonContent = "<b>Ф.И.О.:</b><p>" + record.properties.balloonContentHeader +
+                record.properties.balloonContentBody = "<b>Ф.И.О.:</b><p>" + record.properties.balloonContentHeader +
                   "</p><b>Местоположение ямы:</b><p>" + record.properties.balloonContent +
                   "</p><b>Описание:</b><p>" + record.properties.hintContent +
                   "</p><b>Статус:</b><p>Ремонт выполнен</p><button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"before_photos('" + key +
                   "')\"><i class=\"glyphicon glyphicon-picture\"></i> Фото ямы</button><button type=\"button\" class=\"btn btn-success btn-sm\" onclick=\"after_photos('" + key +
                   "')\"><i class=\"glyphicon glyphicon-picture\"><\/i> Ремонт выполнен<\/button>"
+                if (typeof record.text != "undefined" && record.text != "") { record.properties.balloonContentBody = record.properties.balloonContentBody + "</p><b>Комментарий:</b><p>" + record.text }
+                break;
+              case "reject":
+                record.options.preset = "islands#blueGlyphCircleIcon";
+                record.options.iconGlyph = "remove"
+                record.properties.balloonContentBody = "<b>Ф.И.О.:</b><p>" + record.properties.balloonContentHeader +
+                  "</p><b>Местоположение ямы:</b><p>" + record.properties.balloonContent +
+                  "</p><b>Описание:</b><p>" + record.properties.hintContent +
+                  "</p><b>Статус:</b><p>Заявка отклонена</p><button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"before_photos('" + key +
+                  "')\"><i class=\"glyphicon glyphicon-picture\"></i> Фото ямы</button>"
+                if (!(typeof record.text == "undefined" || record.text == "")) { record.properties.balloonContentBody = record.properties.balloonContentBody + "</p><b>Комментарий:</b><p>" + record.text }
                 break;
               default:
                 record.options.preset = "islands#yellowCircleIcon";
-                record.properties.balloonContent = "<b>Ф.И.О.:</b><p>" + record.properties.balloonContentHeader +
+                record.properties.balloonContentBody = "<b>Ф.И.О.:</b><p>" + record.properties.balloonContentHeader +
                   "</p><b>Местоположение ямы:</b><p>" + record.properties.balloonContent +
                   "</p><b>Описание:</b><p>" + record.properties.hintContent +
                   "</p><b>Статус:</b><p>Заявка принята</p><button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"before_photos('" + key +
                   "')\"><i class=\"glyphicon glyphicon-picture\"></i> Фото ямы</button>"
+                if (typeof record.text != "undefined" || record.text == "") { record.properties.balloonContentBody = record.properties.balloonContentBody + "</p><b>Комментарий:</b><p>" + record.text }
             }
             if (an == true) {
-              record.properties.balloonContent = record.properties.balloonContent + "</p><p>" +
+              record.properties.balloonContentFooter = "</p><b>Редактирование заявки:</b><p>" +
                 //"</button><button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"new_photo('" + key +
                 //"')\"><i class=\"glyphicon glyphicon-picture\"><\/i> Заменить фото<\/button>" +
                 "</button><button type=\"button\" class=\"btn btn-success btn-sm\" onclick=\"vipolnen('" + key +
-                "')\"><i class=\"glyphicon glyphicon-picture\"><\/i> Изменить на: Ремонт выполнен<\/button>" +
+                "')\"> Ремонт выполнен<\/button>" +
                 "</button><button type=\"button\" class=\"btn btn-danger btn-sm\" onclick=\"nuzenremont('" + key +
-                "')\"><i class=\"glyphicon glyphicon-picture\"><\/i> Изменить на: Требуется ремонт<\/button>" 
+                "')\"> Требуется ремонт<\/button>" +
+                "</button><button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"rejectfunc('" + key +
+                "')\"> Заявка отклонена<\/button>" +
+                "</button><button type=\"button\" class=\"btn btn-danger btn-sm\" onclick=\"deletepoint('" + key +
+                "')\"> Удалить<\/button>"
             }
             record.properties.balloonContentHeader = "Заявка";
             record.properties.hintContent = hintContent
             switch (record.status) {
               case "need":
-              i_need=i_need+1;
+                i_need = i_need + 1;
                 object_need.push(record);
                 break;
               case "ok":
-              i_ok=i_ok+1;
+                i_ok = i_ok + 1;
                 object_ok.push(record);
-                console.log(object_ok.value);
+                break;
+              case "reject":
+                i_reject = i_reject + 1;
+                object_reject.push(record);
                 break;
               default:
-              i_accept=i_accept+1;
+                i_accept = i_accept + 1;
                 object_accept.push(record);
             }
           }
@@ -532,12 +582,14 @@
           objectManager_ok.add(JSON.stringify(object_ok));
           objectManager_need.removeAll();
           objectManager_need.add(JSON.stringify(object_need));
+          objectManager_reject.removeAll();
+          objectManager_reject.add(JSON.stringify(object_reject));
 
-          document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(4) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML = i_ok+i_need+i_accept;
-          document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(6) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML = i_accept;
-          document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(5) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML = i_ok;
-          document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(7) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML = i_need;
-          document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(8) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML = 0;
+          document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(3) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML = i_ok + i_need + i_accept + i_reject;
+          document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(5) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML = i_accept;
+          document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(4) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML = i_ok;
+          document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(6) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML = i_need;
+          document.querySelector('#wrapper > nav > div.navbar-default.sidebar > div:nth-child(7) > div > div > div > div.col-xs-10.text-right > div.huge').innerHTML = i_reject;
           $('#loadingDiv').hide();
         });
       };
@@ -607,6 +659,15 @@
           });
         });
       }
+      function sendreject() {
+        firebase.database().ref('neftekamsk/' + key).update({
+          status: "reject",
+          text: document.getElementById('komment').value
+        });
+        $('#modalreject').hide();
+        loaddata();
+        return false
+      };
 
       function BackupBase() {
         $('#loadingDiv').show();
@@ -698,6 +759,13 @@
         $("#modalnewphoto").modal();
         if (!$("#modalnewphoto").parent().is('body'))
           $("#modalnewphoto").appendTo("body");
+      }
+
+      function rejectfunc(id) {
+        key = id;
+        $("#modalreject").modal();
+        if (!$("#modalreject").parent().is('body'))
+          $("#modalreject").appendTo("body");
       }
 
       function vipolnen(id) {

@@ -375,28 +375,7 @@ var tm = new Date();
 var resTxt = formatDate(tm);
 resTxt += "_" + tm.getHours() + "-" + tm.getMinutes() + "-" + tm.getSeconds()+ "_";
   var UID = (resTxt + Math.random().toString(36).substr(2, 5)).toUpperCase();
-  firebase.database().ref('neftekamsk/' + UID).set({
-                TIMESTAMP: firebase.database.ServerValue.TIMESTAMP,
-                type: "Feature",
-                id: "315341",
-                geometry: {
-                    type: "Point",
-                    coordinates: [
-                    document.getElementById('LATITUDE').value,
-                     document.getElementById('LONGITUDE').value
-                    ]
-                },
-                properties: {
-                    iconContent: "<p class=\"fa fa-exclamation\"><\/p>",
-                    balloonContentHeader: document.getElementById("FIO").value,
-                    balloonContent: document.getElementById("Mesto").value,
-                    hintContent: document.getElementById("Opis").value
-                    },
-                options: {
-                    preset: "islands#redCircleIcon"
-                }
-            
-  });
+  
   //var userLastOnlineRef = firebase.database().ref('neftekamsk/' + UID + "/TIMESTAMP");
   //    userLastOnlineRef.onDisconnect().set(firebase.database.ServerValue.TIMESTAMP);
 // File or Blob named mountains.jpg
@@ -449,6 +428,28 @@ uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
   // Upload completed successfully, now we can get the download URL
   uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
     console.log('File available at', downloadURL);
+    firebase.database().ref('neftekamsk/' + UID).set({
+                TIMESTAMP: firebase.database.ServerValue.TIMESTAMP,
+                type: "Feature",
+                id: "315341",
+                geometry: {
+                    type: "Point",
+                    coordinates: [
+                    document.getElementById('LATITUDE').value,
+                     document.getElementById('LONGITUDE').value
+                    ]
+                },
+                properties: {
+                    iconContent: "<p class=\"fa fa-exclamation\"><\/p>",
+                    balloonContentHeader: document.getElementById("FIO").value,
+                    balloonContent: document.getElementById("Mesto").value,
+                    hintContent: document.getElementById("Opis").value
+                    },
+                options: {
+                    preset: "islands#redCircleIcon"
+                }
+            
+  });
     $('#loadingDiv').hide();
     $('#modalSend').modal();
   });
@@ -487,27 +488,6 @@ document.forms[0].onsubmit = SendInfo
     });
     </script>
    <script>
-    function before_photos(id,iblock_id) {
-      $.ajax({
-        url: '/doroga/photos.php',
-        method: 'POST',
-        data: {element_id: id, iblock_id: iblock_id, type: "before"},                    
-        type: 'post',
-        dataType: 'json',
-        success: function(data){
-          //$( "#links" ).append('<p>asdasd</p>');
-          var i;
-          var photos = [];
-          for (i = 0; i < data.length; i++) {
-              photos[i] = "http://ufacity.info" + data[i].photo_src; 
-          }
-
-      $.fancybox(photos, {loop: false});
-
-         // var gallery = blueimp.Gallery(photos);
-             } 
-        }); 
-    }
     function formatDate(date) {
     var d = new Date(date),
         month = '' + (d.getMonth() + 1),
@@ -520,25 +500,6 @@ document.forms[0].onsubmit = SendInfo
     return [year, month, day].join('-');
 }
 
-    function after_photos(id,iblock_id) {
-      $.ajax({
-        url: '/doroga/photos.php',
-        method: 'POST',
-        data: {element_id: id, iblock_id: iblock_id, type: "after"},                    
-        type: 'post',
-        dataType: 'json',
-        success: function(data){
-          var i;
-          var photos = [];
-          for (i = 0; i < data.length; i++) {
-              photos[i] = "http://ufacity.info" + data[i].photo_src; 
-          }
-
-          $.fancybox(photos, {loop: false});
-          //var gallery = blueimp.Gallery(photos);
-             } 
-        }); 
-    } 
 	//auth
 	$('.form_auth .bx-auth-serv-icons a').removeAttr('onclick');
 	var $ok=$('#bx_auth_serv_formOdnoklassniki a').attr('onclick'),$vk=$('#bx_auth_serv_formVKontakte a').attr('onclick');
