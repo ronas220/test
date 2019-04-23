@@ -1,0 +1,585 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="TransTable" msdata:Locale="">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Org" type="xs:string" minOccurs="0" />
+                <xs:element name="IMEI" type="xs:string" />
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                <xs:element name="Icon" type="xs:string" minOccurs="0" />
+                <xs:element name="lat" type="xs:double" minOccurs="0" />
+                <xs:element name="lng" type="xs:double" minOccurs="0" />
+                <xs:element name="Data" type="xs:string" minOccurs="0" />
+                <xs:element name="IsWork" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Distance" type="xs:double" minOccurs="0" />
+                <xs:element name="TimeOfWork" type="xs:string" minOccurs="0" />
+                <xs:element name="StartTime" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="StopTime" type="xs:dateTime" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="OrgTable" msdata:Locale="">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                <xs:element name="FullName" type="xs:string" minOccurs="0" />
+                <xs:element name="WorkAll" type="xs:short" minOccurs="0" />
+                <xs:element name="WorkDone" type="xs:short" minOccurs="0" />
+                <xs:element name="TransAll" type="xs:short" minOccurs="0" />
+                <xs:element name="TransWork" type="xs:short" minOccurs="0" />
+                <xs:element name="Data" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//TransTable" />
+        <xs:field xpath="IMEI" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>1000000141</IMEI>
+    <Name>Погрузчик 7396</Name>
+    <Icon>Tractor</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>1000000142</IMEI>
+    <Name>Погрузчик 7397</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.0803</lat>
+    <lng>54.253036666666667</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>9.5</Distance>
+    <TimeOfWork>493</TimeOfWork>
+    <StartTime>2019-04-23T07:46:45+05:00</StartTime>
+    <StopTime>2019-04-23T16:10:42+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>7042131044</IMEI>
+    <Name>Погрузчик Кировец</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.11164</lat>
+    <lng>54.263756666666666</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+    <StartTime>2019-04-23T08:24:11+05:00</StartTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>7047476048</IMEI>
+    <Name>Погрузчик 7451</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.100293333333333</lat>
+    <lng>54.261688333333332</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>5.5</Distance>
+    <TimeOfWork>468</TimeOfWork>
+    <StartTime>2019-04-23T07:59:20+05:00</StartTime>
+    <StopTime>2019-04-23T16:12:34+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>8027436704</IMEI>
+    <Name>Погрузчик вр1048</Name>
+    <Icon>Truck</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>30574126</IMEI>
+    <Name>Погрузчик уе2190</Name>
+    <Icon>Truck</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>30575776</IMEI>
+    <Name>Грейдер 1054вр</Name>
+    <Icon>Tractor</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>8027109731</IMEI>
+    <Name>КАМАЗ н496ан</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.110975</lat>
+    <lng>54.26334</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>7042130079</IMEI>
+    <Name>Погрузчик 9763</Name>
+    <Icon>Truck</Icon>
+    <lat>56.913413333333331</lat>
+    <lng>55.595416666666665</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>7043168433</IMEI>
+    <Name>МТЗ 0507мм</Name>
+    <Icon>Truck</Icon>
+    <lat>56.111151666666665</lat>
+    <lng>54.263263333333335</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+    <StartTime>2019-04-23T13:38:11+05:00</StartTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>7045378162</IMEI>
+    <Name>CASE ММ3271</Name>
+    <Icon>Truck</Icon>
+    <lat>56.111281666666663</lat>
+    <lng>54.264358333333334</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+    <StartTime>2019-04-23T13:13:41+05:00</StartTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>7045581179</IMEI>
+    <Name>Грейдер 9719мн</Name>
+    <Icon>Tractor</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>0030550779</IMEI>
+    <Name>Грейдер 2193</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.09116</lat>
+    <lng>54.276185</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>15.3</Distance>
+    <TimeOfWork>405</TimeOfWork>
+    <StartTime>2019-04-23T09:25:48+05:00</StartTime>
+    <StopTime>2019-04-23T16:10:28+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>7043350734</IMEI>
+    <Name>Погрузчик 9980мо</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.111058333333332</lat>
+    <lng>54.263308333333335</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+    <StartTime>2019-04-23T09:12:21+05:00</StartTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>7045527339</IMEI>
+    <Name>Погрузчик 9984мо</Name>
+    <Icon>Truck</Icon>
+    <lat>56.111601666666665</lat>
+    <lng>54.263685</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+    <StartTime>2019-04-23T08:23:49+05:00</StartTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>7046638432</IMEI>
+    <Name>МТЗ 0513мм</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.11125</lat>
+    <lng>54.266578333333335</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+    <StartTime>2019-04-23T07:55:27+05:00</StartTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>7046661665</IMEI>
+    <Name>МТЗ вр1084</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.10711666666667</lat>
+    <lng>54.282713333333334</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>19.3</Distance>
+    <TimeOfWork>431</TimeOfWork>
+    <StartTime>2019-04-23T09:02:00+05:00</StartTime>
+    <StopTime>2019-04-23T16:12:43+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>1000000046</IMEI>
+    <Name>КАМАЗ н493ан</Name>
+    <Icon>Tractor</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>1000000051</IMEI>
+    <Name>КАМАЗ е675кв</Name>
+    <Icon>Tractor</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>1000000146</IMEI>
+    <Name>МТЗ вр1040</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.106946666666666</lat>
+    <lng>54.28256833333333</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>5.7</Distance>
+    <TimeOfWork>379</TimeOfWork>
+    <StartTime>2019-04-23T08:12:23+05:00</StartTime>
+    <StopTime>2019-04-23T16:12:25+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Ремжилстрой</Org>
+    <IMEI>7041955930</IMEI>
+    <Name>МТЗ 4632ма</Name>
+    <Icon>Tractor</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Ремжилстрой</Org>
+    <IMEI>1040087429</IMEI>
+    <Name>КАМАЗ в764аа</Name>
+    <Icon>Truck</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Ремжилстрой</Org>
+    <IMEI>7042115575</IMEI>
+    <Name>Т156 5336вр</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.08456833333333</lat>
+    <lng>54.262751666666666</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Ремжилстрой</Org>
+    <IMEI>1040080325</IMEI>
+    <Name>УАЗ 760 аварийная</Name>
+    <Icon>Tractor</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Ремжилстрой</Org>
+    <IMEI>7042122183</IMEI>
+    <Name>МТЗ 8128уа</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.08448</lat>
+    <lng>54.262738333333331</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+    <StartTime>2019-04-23T07:42:16+05:00</StartTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Ремжилстрой</Org>
+    <IMEI>7041972869</IMEI>
+    <Name>МТЗ 9412ма</Name>
+    <Icon>Tractor</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Ремжилстрой</Org>
+    <IMEI>7041971739</IMEI>
+    <Name>МТЗ 5306вр</Name>
+    <Icon>Tractor</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Ремжилстрой</Org>
+    <IMEI>7041956029</IMEI>
+    <Name>МТЗ 3815ма</Name>
+    <Icon>Tractor</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Ремжилстрой</Org>
+    <IMEI>7041966382</IMEI>
+    <Name>МТЗ 4604ма</Name>
+    <Icon>Tractor</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>6014095727</IMEI>
+    <Name>МТЗ 0598мм</Name>
+    <Icon>Tractor</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>0030796224</IMEI>
+    <Name>ЗИЛ с542ха</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.071205</lat>
+    <lng>54.265151666666668</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>38.9</Distance>
+    <TimeOfWork>389</TimeOfWork>
+    <StartTime>2019-04-23T08:14:35+05:00</StartTime>
+    <StopTime>2019-04-23T16:04:58+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>6014203214</IMEI>
+    <Name>КАМАЗ у189нв</Name>
+    <Icon>Truck</Icon>
+    <lat>56.09055166666667</lat>
+    <lng>54.243983333333333</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>28.9</Distance>
+    <TimeOfWork>464</TimeOfWork>
+    <StartTime>2019-04-23T08:28:55+05:00</StartTime>
+    <StopTime>2019-04-23T16:12:46+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>6014149656</IMEI>
+    <Name>МТЗ 0597мм</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.094476666666665</lat>
+    <lng>54.261433333333336</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>9</Distance>
+    <TimeOfWork>410</TimeOfWork>
+    <StartTime>2019-04-23T09:22:00+05:00</StartTime>
+    <StopTime>2019-04-23T16:11:55+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000008</IMEI>
+    <Name>КАМАЗ с300ох щетка</Name>
+    <Icon>Truck</Icon>
+    <lat>56.071013333333333</lat>
+    <lng>54.26583</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>80.9</Distance>
+    <TimeOfWork>884</TimeOfWork>
+    <StartTime>2019-04-23T00:00:00+05:00</StartTime>
+    <StopTime>2019-04-23T16:11:28+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000040</IMEI>
+    <Name>МАЗ с080ае</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.070876666666663</lat>
+    <lng>54.2659</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>46.2</Distance>
+    <TimeOfWork>269</TimeOfWork>
+    <StartTime>2019-04-23T08:36:10+05:00</StartTime>
+    <StopTime>2019-04-23T14:18:47+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000167</IMEI>
+    <Name>КАМАЗ в145тт</Name>
+    <Icon>Truck</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000177</IMEI>
+    <Name>Газон у972нр</Name>
+    <Icon>Truck</Icon>
+    <lat>56.020161666666667</lat>
+    <lng>54.264998333333331</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>27.5</Distance>
+    <TimeOfWork>275</TimeOfWork>
+    <StartTime>2019-04-23T08:11:25+05:00</StartTime>
+    <StopTime>2019-04-23T15:20:56+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000189</IMEI>
+    <Name>КАМАЗ в754рм</Name>
+    <Icon>Truck</Icon>
+    <lat>56.09140166666667</lat>
+    <lng>54.23708</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>23.9</Distance>
+    <TimeOfWork>431</TimeOfWork>
+    <StartTime>2019-04-23T08:24:41+05:00</StartTime>
+    <StopTime>2019-04-23T16:08:12+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000191</IMEI>
+    <Name>ДТ 75 3296мм</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.097371666666668</lat>
+    <lng>54.26033833333333</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+    <StartTime>2019-04-23T10:42:39+05:00</StartTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000200</IMEI>
+    <Name>Газель с003ае</Name>
+    <Icon>Truck</Icon>
+    <lat>56.097075</lat>
+    <lng>54.256855</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>19</Distance>
+    <TimeOfWork>263</TimeOfWork>
+    <StartTime>2019-04-23T07:37:15+05:00</StartTime>
+    <StopTime>2019-04-23T13:03:23+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000271</IMEI>
+    <Name>ГАЗ е558вх самосвал</Name>
+    <Icon>Truck</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000276</IMEI>
+    <Name>Грейдер 3294мм</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.097126666666668</lat>
+    <lng>54.260951666666664</lng>
+    <Data>23.04.2019 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+    <StartTime>2019-04-23T09:32:32+05:00</StartTime>
+  </TransTable>
+</NewDataSet>
