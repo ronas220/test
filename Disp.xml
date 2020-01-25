@@ -1,4 +1,4 @@
-<?xml version="1.0" standalone="yes"?>
+﻿<?xml version="1.0" standalone="yes"?>
 <NewDataSet>
   <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False">
@@ -43,85 +43,18 @@
       </xs:unique>
     </xs:element>
   </xs:schema>
-  <TransTable>
+ <TransTable>
     <Org>ООО Танып</Org>
-    <IMEI>1000000141</IMEI>
-    <Name>Погрузчик 7396</Name>
-    <Icon>Tractor</Icon>
-    <lat>55.775785</lat>
-    <lng>54.355555</lng>
-    <Data>20.02.2019 0:00:00</Data>
+    <IMEI>7045378162</IMEI>
+    <Name>CASE ММ3271</Name>
+    <Icon>Truck</Icon>
+    <lat>56.11116</lat>
+    <lng>54.263761666666667</lng>
+    <Data>24.01.2020 0:00:00</Data>
     <IsWork>false</IsWork>
     <Distance>0</Distance>
     <TimeOfWork>0</TimeOfWork>
-  </TransTable>
-  <TransTable>
-    <Org>ООО Танып</Org>
-    <IMEI>1000000142</IMEI>
-    <Name>Погрузчик 7397</Name>
-    <Icon>Tractor</Icon>
-    <lat>56.058425</lat>
-    <lng>54.292335</lng>
-    <Data>20.02.2019 0:00:00</Data>
-    <IsWork>true</IsWork>
-    <Distance>41.7</Distance>
-    <TimeOfWork>390</TimeOfWork>
-    <StartTime>2019-02-20T07:56:41+05:00</StartTime>
-    <StopTime>2019-02-20T14:34:20+05:00</StopTime>
-  </TransTable>
-  <TransTable>
-    <Org>ООО Танып</Org>
-    <IMEI>7042131044</IMEI>
-    <Name>Погрузчик Кировец</Name>
-    <Icon>Tractor</Icon>
-    <lat>56.087231666666668</lat>
-    <lng>54.286648333333332</lng>
-    <Data>20.02.2019 0:00:00</Data>
-    <IsWork>true</IsWork>
-    <Distance>13.8</Distance>
-    <TimeOfWork>317</TimeOfWork>
-    <StartTime>2019-02-20T08:50:34+05:00</StartTime>
-    <StopTime>2019-02-20T14:34:12+05:00</StopTime>
-  </TransTable>
-  <TransTable>
-    <Org>ООО Танып</Org>
-    <IMEI>7047476048</IMEI>
-    <Name>Погрузчик 7451</Name>
-    <Icon>Tractor</Icon>
-    <lat>56.075673333333334</lat>
-    <lng>54.238815</lng>
-    <Data>20.02.2019 0:00:00</Data>
-    <IsWork>true</IsWork>
-    <Distance>27.6</Distance>
-    <TimeOfWork>391</TimeOfWork>
-    <StartTime>2019-02-20T08:01:15+05:00</StartTime>
-    <StopTime>2019-02-20T14:32:40+05:00</StopTime>
-  </TransTable>
-  <TransTable>
-    <Org>ООО Танып</Org>
-    <IMEI>8027436704</IMEI>
-    <Name>Погрузчик вр1048</Name>
-    <Icon>Truck</Icon>
-    <lat>56.065516666666667</lat>
-    <lng>54.276888333333332</lng>
-    <Data>20.02.2019 0:00:00</Data>
-    <IsWork>true</IsWork>
-    <Distance>45.3</Distance>
-    <TimeOfWork>363</TimeOfWork>
-    <StartTime>2019-02-20T08:24:01+05:00</StartTime>
-    <StopTime>2019-02-20T14:26:40+05:00</StopTime>
-  </TransTable>
-  <TransTable>
-    <Org>ООО Танып</Org>
-    <IMEI>30574126</IMEI>
-    <Name>Погрузчик уе2190</Name>
-    <Icon>Truck</Icon>
-    <lat>0</lat>
-    <lng>0</lng>
-    <Data>20.02.2019 0:00:00</Data>
-    <IsWork>false</IsWork>
-    <Distance>0</Distance>
-    <TimeOfWork>0</TimeOfWork>
+    <StartTime>2020-01-24T08:26:03+05:00</StartTime>
   </TransTable>
   <TransTable>
     <Org>ООО Танып</Org>
@@ -130,152 +63,31 @@
     <Icon>Tractor</Icon>
     <lat>0</lat>
     <lng>0</lng>
-    <Data>20.02.2019 0:00:00</Data>
+    <Data>24.01.2020 0:00:00</Data>
     <IsWork>false</IsWork>
     <Distance>0</Distance>
     <TimeOfWork>0</TimeOfWork>
-  </TransTable>
-  <TransTable>
-    <Org>ООО Танып</Org>
-    <IMEI>8027109731</IMEI>
-    <Name>КАМАЗ н496ан</Name>
-    <Icon>Tractor</Icon>
-    <lat>0</lat>
-    <lng>0</lng>
-    <Data>20.02.2019 0:00:00</Data>
-    <IsWork>false</IsWork>
-    <Distance>0</Distance>
-    <TimeOfWork>0</TimeOfWork>
-  </TransTable>
-  <TransTable>
-    <Org>ООО Танып</Org>
-    <IMEI>7042130079</IMEI>
-    <Name>Погрузчик 9763</Name>
-    <Icon>Truck</Icon>
-    <lat>56.913503333333331</lat>
-    <lng>55.595761666666668</lng>
-    <Data>20.02.2019 0:00:00</Data>
-    <IsWork>false</IsWork>
-    <Distance>0</Distance>
-    <TimeOfWork>0</TimeOfWork>
-  </TransTable>
-  <TransTable>
-    <Org>ООО Танып</Org>
-    <IMEI>7043168433</IMEI>
-    <Name>МТЗ 0507мм</Name>
-    <Icon>Truck</Icon>
-    <lat>56.111205</lat>
-    <lng>54.264985</lng>
-    <Data>20.02.2019 0:00:00</Data>
-    <IsWork>false</IsWork>
-    <Distance>0</Distance>
-    <TimeOfWork>0</TimeOfWork>
-    <StartTime>2019-02-20T13:26:28+05:00</StartTime>
-  </TransTable>
-  <TransTable>
-    <Org>ООО Танып</Org>
-    <IMEI>7045378162</IMEI>
-    <Name>CASE ММ3271</Name>
-    <Icon>Truck</Icon>
-    <lat>56.097906666666667</lat>
-    <lng>54.268863333333336</lng>
-    <Data>20.02.2019 0:00:00</Data>
-    <IsWork>true</IsWork>
-    <Distance>29.8</Distance>
-    <TimeOfWork>391</TimeOfWork>
-    <StartTime>2019-02-20T08:03:39+05:00</StartTime>
-    <StopTime>2019-02-20T14:34:33+05:00</StopTime>
-  </TransTable>
-  <TransTable>
-    <Org>ООО Танып</Org>
-    <IMEI>7045581179</IMEI>
-    <Name>Грейдер 9719мн</Name>
-    <Icon>Tractor</Icon>
-    <lat>56.0419</lat>
-    <lng>54.27047</lng>
-    <Data>20.02.2019 0:00:00</Data>
-    <IsWork>true</IsWork>
-    <Distance>24.6</Distance>
-    <TimeOfWork>367</TimeOfWork>
-    <StartTime>2019-02-20T08:27:12+05:00</StartTime>
-    <StopTime>2019-02-20T14:34:06+05:00</StopTime>
   </TransTable>
   <TransTable>
     <Org>ООО Танып</Org>
     <IMEI>0030550779</IMEI>
     <Name>Грейдер 2193</Name>
     <Icon>Tractor</Icon>
-    <lat>56.111398333333334</lat>
-    <lng>54.265305</lng>
-    <Data>20.02.2019 0:00:00</Data>
+    <lat>56.111468333333335</lat>
+    <lng>54.26526</lng>
+    <Data>24.01.2020 0:00:00</Data>
     <IsWork>false</IsWork>
     <Distance>0</Distance>
     <TimeOfWork>0</TimeOfWork>
   </TransTable>
   <TransTable>
     <Org>ООО Танып</Org>
-    <IMEI>7043350734</IMEI>
-    <Name>Погрузчик 9980мо</Name>
-    <Icon>Tractor</Icon>
-    <lat>56.08101</lat>
-    <lng>54.24784</lng>
-    <Data>20.02.2019 0:00:00</Data>
-    <IsWork>true</IsWork>
-    <Distance>26.4</Distance>
-    <TimeOfWork>402</TimeOfWork>
-    <StartTime>2019-02-20T07:52:12+05:00</StartTime>
-    <StopTime>2019-02-20T14:34:13+05:00</StopTime>
-  </TransTable>
-  <TransTable>
-    <Org>ООО Танып</Org>
-    <IMEI>7045527339</IMEI>
-    <Name>Погрузчик 9984мо</Name>
-    <Icon>Truck</Icon>
-    <lat>56.07662666666667</lat>
-    <lng>54.24522833333333</lng>
-    <Data>20.02.2019 0:00:00</Data>
-    <IsWork>true</IsWork>
-    <Distance>45.2</Distance>
-    <TimeOfWork>399</TimeOfWork>
-    <StartTime>2019-02-20T07:55:21+05:00</StartTime>
-    <StopTime>2019-02-20T14:34:17+05:00</StopTime>
-  </TransTable>
-  <TransTable>
-    <Org>ООО Танып</Org>
-    <IMEI>7046638432</IMEI>
-    <Name>МТЗ 0513мм</Name>
-    <Icon>Tractor</Icon>
-    <lat>56.086603333333336</lat>
-    <lng>54.275723333333332</lng>
-    <Data>20.02.2019 0:00:00</Data>
-    <IsWork>true</IsWork>
-    <Distance>32.5</Distance>
-    <TimeOfWork>395</TimeOfWork>
-    <StartTime>2019-02-20T07:58:41+05:00</StartTime>
-    <StopTime>2019-02-20T14:34:09+05:00</StopTime>
-  </TransTable>
-  <TransTable>
-    <Org>ООО Танып</Org>
-    <IMEI>7046661665</IMEI>
-    <Name>МТЗ вр1084</Name>
-    <Icon>Tractor</Icon>
-    <lat>56.082578333333331</lat>
-    <lng>54.290526666666665</lng>
-    <Data>20.02.2019 0:00:00</Data>
-    <IsWork>true</IsWork>
-    <Distance>35.8</Distance>
-    <TimeOfWork>393</TimeOfWork>
-    <StartTime>2019-02-20T08:01:12+05:00</StartTime>
-    <StopTime>2019-02-20T14:34:14+05:00</StopTime>
-  </TransTable>
-  <TransTable>
-    <Org>ООО Танып</Org>
-    <IMEI>1000000046</IMEI>
-    <Name>КАМАЗ н493ан</Name>
+    <IMEI>7045581179</IMEI>
+    <Name>Грейдер 9719мн</Name>
     <Icon>Tractor</Icon>
     <lat>0</lat>
     <lng>0</lng>
-    <Data>20.02.2019 0:00:00</Data>
+    <Data>24.01.2020 0:00:00</Data>
     <IsWork>false</IsWork>
     <Distance>0</Distance>
     <TimeOfWork>0</TimeOfWork>
@@ -287,19 +99,173 @@
     <Icon>Tractor</Icon>
     <lat>0</lat>
     <lng>0</lng>
-    <Data>20.02.2019 0:00:00</Data>
+    <Data>24.01.2020 0:00:00</Data>
     <IsWork>false</IsWork>
     <Distance>0</Distance>
     <TimeOfWork>0</TimeOfWork>
   </TransTable>
   <TransTable>
     <Org>ООО Танып</Org>
+    <IMEI>1000000046</IMEI>
+    <Name>КАМАЗ н493ан</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.111373333333333</lat>
+    <lng>54.260523333333332</lng>
+    <Data>24.01.2020 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>51.5</Distance>
+    <TimeOfWork>498</TimeOfWork>
+    <StartTime>2020-01-24T08:22:35+05:00</StartTime>
+    <StopTime>2020-01-24T16:41:05+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>8027109731</IMEI>
+    <Name>КАМАЗ н496ан</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.111141666666668</lat>
+    <lng>54.263826666666667</lng>
+    <Data>24.01.2020 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>7043168433</IMEI>
+    <Name>МТЗ 0507мм</Name>
+    <Icon>Truck</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>24.01.2020 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>7046638432</IMEI>
+    <Name>МТЗ 0513мм</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.111403333333335</lat>
+    <lng>54.260415</lng>
+    <Data>24.01.2020 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>22.9</Distance>
+    <TimeOfWork>329</TimeOfWork>
+    <StartTime>2020-01-24T11:12:27+05:00</StartTime>
+    <StopTime>2020-01-24T16:41:15+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
     <IMEI>1000000146</IMEI>
     <Name>МТЗ вр1040</Name>
     <Icon>Tractor</Icon>
-    <lat>56.11119</lat>
-    <lng>54.263986666666668</lng>
-    <Data>20.02.2019 0:00:00</Data>
+    <lat>56.110891666666667</lat>
+    <lng>54.266786666666668</lng>
+    <Data>24.01.2020 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>7046661665</IMEI>
+    <Name>МТЗ вр1084</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.11141</lat>
+    <lng>54.260421666666666</lng>
+    <Data>24.01.2020 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>22.8</Distance>
+    <TimeOfWork>94</TimeOfWork>
+    <StartTime>2020-01-24T15:07:07+05:00</StartTime>
+    <StopTime>2020-01-24T16:41:10+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>1000000141</IMEI>
+    <Name>Погрузчик 7396</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.111293333333336</lat>
+    <lng>54.265083333333337</lng>
+    <Data>24.01.2020 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>9.9</Distance>
+    <TimeOfWork>31</TimeOfWork>
+    <StartTime>2020-01-24T16:15:47+05:00</StartTime>
+    <StopTime>2020-01-24T16:47:03+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>1000000142</IMEI>
+    <Name>Погрузчик 7397</Name>
+    <Icon>Tractor</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>24.01.2020 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>7047476048</IMEI>
+    <Name>Погрузчик 7451</Name>
+    <Icon>Tractor</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>24.01.2020 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>1000000385</IMEI>
+    <Name>JCB 2567му</Name>
+    <Icon>Truck</Icon>
+    <lat>53.42509</lat>
+    <lng>58.930278333333334</lng>
+    <Data>24.01.2020 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>7043350734</IMEI>
+    <Name>Погрузчик 9980мо</Name>
+    <Icon>Tractor</Icon>
+    <lat>56.109433333333335</lat>
+    <lng>54.264408333333336</lng>
+    <Data>24.01.2020 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>12</Distance>
+    <TimeOfWork>424</TimeOfWork>
+    <StartTime>2020-01-24T07:12:36+05:00</StartTime>
+    <StopTime>2020-01-24T16:07:39+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>7045527339</IMEI>
+    <Name>Погрузчик 9984мо</Name>
+    <Icon>Truck</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>24.01.2020 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>ООО Танып</Org>
+    <IMEI>7042131044</IMEI>
+    <Name>Погрузчик Кировец</Name>
+    <Icon>Tractor</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>24.01.2020 0:00:00</Data>
     <IsWork>false</IsWork>
     <Distance>0</Distance>
     <TimeOfWork>0</TimeOfWork>
