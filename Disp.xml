@@ -451,4 +451,22 @@
 <Name>МТЗ му2571</Name>
 <Icon>Tractor</Icon>
 </TransTable>
+<TransTable>
+<Org>МБУ СЧиП</Org>
+<IMEI>1000000116</IMEI>
+<Name>Грейдер</Name>
+<Icon>Tractor</Icon>
+</TransTable>
+<TransTable>
+<Org>МБУ СЧиП</Org>
+<IMEI>1000000383</IMEI>
+<Name>Пылесос</Name>
+<Icon>Tractor</Icon>
+</TransTable>
+<TransTable>
+<Org>МБУ СЧиП</Org>
+<IMEI>1000000403</IMEI>
+<Name>Грейдер 6457му02</Name>
+<Icon>Tractor</Icon>
+</TransTable>
 </NewDataSet>
