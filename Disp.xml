@@ -1,7 +1,9 @@
-﻿<?xml version="1.0" standalone="yes"?>
+<?xml version="1.0" standalone="yes"?>
 <NewDataSet>
-  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False">
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"
+      msdata:EnforceConstraints="False">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="TransTable" msdata:Locale="">
@@ -43,7 +45,7 @@
       </xs:unique>
     </xs:element>
   </xs:schema>
- <TransTable>
+  <TransTable>
     <Org>ООО Танып</Org>
     <IMEI>7045378162</IMEI>
     <Name>CASE ММ3271</Name>
@@ -380,75 +382,106 @@
     <Distance>0</Distance>
     <TimeOfWork>0</TimeOfWork>
   </TransTable>
-<TransTable>
-<Org>ООО ГКС</Org>
-<IMEI>0030796224</IMEI>
-<Name>ЗИЛ с542ха</Name>
-<Icon>Truck</Icon>
-</TransTable><TransTable>
-<Org>ООО ГКС</Org>
-<IMEI>8027292800</IMEI>
-<Name>МТЗ му2572</Name>
-<Icon>Truck</Icon>
-</TransTable><TransTable>
-<Org>ООО ГКС</Org>
-<IMEI>6014203214</IMEI>
-<Name>КАМАЗ у189нв</Name>
-<Icon>Truck</Icon>
-</TransTable><TransTable>
-<Org>ООО ГКС</Org>
-<IMEI>6014149656</IMEI>
-<Name>МТЗ му2570</Name>
-<Icon>Tractor</Icon>
-</TransTable><TransTable>
-<Org>ООО ГКС</Org>
-<IMEI>1000000008</IMEI>
-<Name>КАМАЗ с300ох щетка</Name>
-<Icon>Truck</Icon>
-</TransTable><TransTable>
-<Org>ООО ГКС</Org>
-<IMEI>1000000040</IMEI>
-<Name>МАЗ с080ае</Name>
-<Icon>Truck</Icon>
-</TransTable><TransTable>
-<Org>ООО ГКС</Org>
-<IMEI>1000000177</IMEI>
-<Name>Газон у972нр</Name>
-<Icon>Truck</Icon>
-</TransTable><TransTable>
-<Org>ООО ГКС</Org>
-<IMEI>1000000189</IMEI>
-<Name>КАМАЗ в754рм</Name>
-<Icon>Truck</Icon>
-</TransTable><TransTable>
-<Org>ООО ГКС</Org>
-<IMEI>1000000191</IMEI>
-<Name>ДТ 75 3296мм</Name>
-<Icon>Tractor</Icon>
-</TransTable><TransTable>
-<Org>ООО ГКС</Org>
-<IMEI>1000000200</IMEI>
-<Name>Газель с003ае</Name>
-<Icon>Truck</Icon>
-</TransTable><TransTable>
-<Org>ООО ГКС</Org>
-<IMEI>1000000271</IMEI>
-<Name>ГАЗ е558вх самосвал</Name>
-<Icon>Truck</Icon>
-</TransTable><TransTable>
-<Org>ООО ГКС</Org>
-<IMEI>1000000276</IMEI>
-<Name>Грейдер 3294мм</Name>
-<Icon>Tractor</Icon>
-</TransTable><TransTable>
-<Org>ООО ГКС</Org>
-<IMEI>1000000320</IMEI>
-<Name>Газель 727</Name>
-<Icon>Truck</Icon>
-</TransTable><TransTable>
-<Org>ООО ГКС</Org>
-<IMEI>1000000348</IMEI>
-<Name>МТЗ му2571</Name>
-<Icon>Tractor</Icon>
-</TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>0030796224</IMEI>
+    <Name>ЗИЛ с542ха</Name>
+    <Icon>Truck</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>8027292800</IMEI>
+    <Name>МТЗ му2572</Name>
+    <Icon>Truck</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>6014203214</IMEI>
+    <Name>КАМАЗ у189нв</Name>
+    <Icon>Truck</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>6014149656</IMEI>
+    <Name>МТЗ му2570</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000008</IMEI>
+    <Name>КАМАЗ с300ох щетка</Name>
+    <Icon>Truck</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000040</IMEI>
+    <Name>МАЗ с080ае</Name>
+    <Icon>Truck</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000177</IMEI>
+    <Name>Газон у972нр</Name>
+    <Icon>Truck</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000189</IMEI>
+    <Name>КАМАЗ в754рм</Name>
+    <Icon>Truck</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000191</IMEI>
+    <Name>ДТ 75 3296мм</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000200</IMEI>
+    <Name>Газель с003ае</Name>
+    <Icon>Truck</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000271</IMEI>
+    <Name>ГАЗ е558вх самосвал</Name>
+    <Icon>Truck</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000276</IMEI>
+    <Name>Грейдер 3294мм</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000320</IMEI>
+    <Name>Газель 727</Name>
+    <Icon>Truck</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>1000000348</IMEI>
+    <Name>МТЗ му2571</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>МБУ СЧиП</Org>
+    <IMEI>1000000116</IMEI>
+    <Name>Грейдер</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>МБУ СЧиП</Org>
+    <IMEI>1000000383</IMEI>
+    <Name>Пылесос</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>МБУ СЧиП</Org>
+    <IMEI>1000000403</IMEI>
+    <Name>Грейдер 6457му02</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
 </NewDataSet>
