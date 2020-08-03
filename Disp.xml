@@ -459,6 +459,18 @@
     <Distance>0</Distance>
     <TimeOfWork>0</TimeOfWork>
   </TransTable>
+    <TransTable>
+    <Org>ООО ГКС</Org>
+    <IMEI>8027292800</IMEI>
+    <Name>МТЗ 0598мм</Name>
+    <Icon>Truck</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>10.06.2020 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
   <TransTable>
     <Org>ООО ГКС</Org>
     <IMEI>1000000177</IMEI>
