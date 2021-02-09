@@ -1,9 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
 <NewDataSet>
-  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"
-      msdata:EnforceConstraints="False">
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="TransTable" msdata:Locale="">
@@ -87,7 +85,7 @@
     <Distance>0</Distance>
     <TimeOfWork>0</TimeOfWork>
   </TransTable>
-  <TransTable>
+<TransTable>
     <Org>ООО Танып</Org>
     <IMEI>1000000046</IMEI>
     <Name>КАМАЗ н493ан</Name>
@@ -98,8 +96,6 @@
     <IsWork>true</IsWork>
     <Distance>12.5</Distance>
     <TimeOfWork>70</TimeOfWork>
-    <StartTime>2020-06-10T07: 54: 14+05: 00</StartTime>
-    <StopTime>2020-06-10T09: 04: 10+05: 00</StopTime>
   </TransTable>
   <TransTable>
     <Org>ООО Танып</Org>
@@ -172,8 +168,6 @@
     <IsWork>true</IsWork>
     <Distance>5.7</Distance>
     <TimeOfWork>64</TimeOfWork>
-    <StartTime>2020-06-10T07: 57: 20+05: 00</StartTime>
-    <StopTime>2020-06-10T09: 01: 39+05: 00</StopTime>
   </TransTable>
   <TransTable>
     <Org>ООО Танып</Org>
@@ -186,8 +180,6 @@
     <IsWork>true</IsWork>
     <Distance>4</Distance>
     <TimeOfWork>62</TimeOfWork>
-    <StartTime>2020-06-10T08: 00: 05+05: 00</StartTime>
-    <StopTime>2020-06-10T09: 02: 34+05: 00</StopTime>
   </TransTable>
   <TransTable>
     <Org>ООО Танып</Org>
@@ -212,8 +204,6 @@
     <IsWork>true</IsWork>
     <Distance>7.2</Distance>
     <TimeOfWork>103</TimeOfWork>
-    <StartTime>2020-06-10T07: 21: 09+05: 00</StartTime>
-    <StopTime>2020-06-10T09: 03: 51+05: 00</StopTime>
   </TransTable>
   <TransTable>
     <Org>ООО Танып</Org>
@@ -226,7 +216,6 @@
     <IsWork>false</IsWork>
     <Distance>0</Distance>
     <TimeOfWork>0</TimeOfWork>
-    <StartTime>2020-06-10T08: 09: 56+05: 00</StartTime>
   </TransTable>
   <TransTable>
     <Org>ООО Танып</Org>
@@ -239,7 +228,6 @@
     <IsWork>false</IsWork>
     <Distance>0</Distance>
     <TimeOfWork>0</TimeOfWork>
-    <StartTime>2020-06-10T08: 30: 41+05: 00</StartTime>
   </TransTable>
   <TransTable>
     <Org>ООО Ремжилстрой</Org>
@@ -300,8 +288,6 @@
     <IsWork>true</IsWork>
     <Distance>9.7</Distance>
     <TimeOfWork>63</TimeOfWork>
-    <StartTime>2020-06-10T07: 19: 49+05: 00</StartTime>
-    <StopTime>2020-06-10T08: 23: 09+05: 00</StopTime>
   </TransTable>
   <TransTable>
     <Org>ООО Ремжилстрой</Org>
