@@ -1,7 +1,9 @@
 <?xml version="1.0" standalone="yes"?>
 <NewDataSet>
-  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False">
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"
+      msdata:EnforceConstraints="False">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="TransTable" msdata:Locale="">
@@ -85,7 +87,7 @@
     <Distance>0</Distance>
     <TimeOfWork>0</TimeOfWork>
   </TransTable>
-<TransTable>
+  <TransTable>
     <Org>ООО Танып</Org>
     <IMEI>1000000046</IMEI>
     <Name>КАМАЗ н493ан</Name>
@@ -444,5 +446,53 @@
     <IMEI>1000000490</IMEI>
     <Name>УАЗ с058со</Name>
     <Icon>Truck</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>АгроРемонтСтрой</Org>
+    <IMEI>8027292800</IMEI>
+    <Name>Погрузчик 2667</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>АгроРемонтСтрой</Org>
+    <IMEI>6014149656</IMEI>
+    <Name>Погрузчик 5386мт</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>АгроРемонтСтрой</Org>
+    <IMEI>1000000177</IMEI>
+    <Name>в320тк102</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>АгроРемонтСтрой</Org>
+    <IMEI>1000000191</IMEI>
+    <Name>Трактор 2572му</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>АгроРемонтСтрой</Org>
+    <IMEI>1000000271</IMEI>
+    <Name>Трактор 2571му</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>АгроРемонтСтрой</Org>
+    <IMEI>1000000276</IMEI>
+    <Name>Погрузчик 3291</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>АгроРемонтСтрой</Org>
+    <IMEI>1000000348</IMEI>
+    <Name>КАМАЗ в950тт</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>АгроРемонтСтрой</Org>
+    <IMEI>1000000501</IMEI>
+    <Name>Трактор 2671</Name>
+    <Icon>Tractor</Icon>
   </TransTable>
 </NewDataSet>
