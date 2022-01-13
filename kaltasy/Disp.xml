@@ -1,0 +1,98 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="OrgTable" msdata:Locale="">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                <xs:element name="FullName" type="xs:string" minOccurs="0" />
+                <xs:element name="WorkAll" type="xs:short" minOccurs="0" />
+                <xs:element name="WorkDone" type="xs:short" minOccurs="0" />
+                <xs:element name="TransAll" type="xs:short" minOccurs="0" />
+                <xs:element name="TransWork" type="xs:short" minOccurs="0" />
+                <xs:element name="Data" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="TransTable" msdata:CaseSensitive="False" msdata:Locale="">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Org" type="xs:string" minOccurs="0" />
+                <xs:element name="IMEI" type="xs:string" />
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                <xs:element name="Icon" type="xs:string" minOccurs="0" />
+                <xs:element name="lat" type="xs:double" minOccurs="0" />
+                <xs:element name="lng" type="xs:double" minOccurs="0" />
+                <xs:element name="Data" type="xs:string" minOccurs="0" />
+                <xs:element name="IsWork" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Distance" type="xs:double" minOccurs="0" />
+                <xs:element name="TimeOfWork" type="xs:string" minOccurs="0" />
+                <xs:element name="StartTime" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="StopTime" type="xs:dateTime" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//TransTable" />
+        <xs:field xpath="IMEI" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <TransTable>
+    <Org>Калтасы</Org>
+    <IMEI>1000000570</IMEI>
+    <Name>Камаз к606св102</Name>
+    <Icon>Truck</Icon>
+    <lat>55.969791666666666</lat>
+    <lng>54.785293333333335</lng>
+    <Data>12.01.2022 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>31.3</Distance>
+    <TimeOfWork>322</TimeOfWork>
+    <StartTime>2022-01-12T07:43:31+05:00</StartTime>
+    <StopTime>2022-01-12T13:25:56+05:00</StopTime>
+  </TransTable>
+  <TransTable>
+    <Org>Калтасы</Org>
+    <IMEI>1000000571</IMEI>
+    <Name>Трактор 2174мм02</Name>
+    <Icon>Tractor</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>12.01.2022 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>Калтасы</Org>
+    <IMEI>1000000572</IMEI>
+    <Name>ЗИЛ с542ха102</Name>
+    <Icon>Truck</Icon>
+    <lat>0</lat>
+    <lng>0</lng>
+    <Data>12.01.2022 0:00:00</Data>
+    <IsWork>false</IsWork>
+    <Distance>0</Distance>
+    <TimeOfWork>0</TimeOfWork>
+  </TransTable>
+  <TransTable>
+    <Org>Калтасы</Org>
+    <IMEI>1000000573</IMEI>
+    <Name>Камаз т336хв102</Name>
+    <Icon>Tractor</Icon>
+    <lat>55.969588333333334</lat>
+    <lng>54.788928333333331</lng>
+    <Data>12.01.2022 0:00:00</Data>
+    <IsWork>true</IsWork>
+    <Distance>57.7</Distance>
+    <TimeOfWork>484</TimeOfWork>
+    <StartTime>2022-01-12T08:01:13+05:00</StartTime>
+    <StopTime>2022-01-12T16:20:19+05:00</StopTime>
+  </TransTable>
+</NewDataSet>
