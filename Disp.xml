@@ -519,16 +519,6 @@
   </TransTable>
   <TransTable>
     <Org>Башспецмонтаж</Org>
-    <IMEI>4002412400</IMEI>
-    <Name>ГАЗ 478</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
-    <Org>Башспецмонтаж</Org>
-    <IMEI>1000000495</IMEI>
-    <Name>Камаз х854ет02</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
-    <Org>Башспецмонтаж</Org>
     <IMEI>1000000565</IMEI>
     <Name>Камаз х500вм102</Name>
     <Icon>Tractor</Icon> </TransTable
