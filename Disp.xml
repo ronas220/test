@@ -1,17 +1,9 @@
 <?xml version="1.0" standalone="yes"?>
 <NewDataSet>
-  <xs:schema
-    id="NewDataSet"
-    xmlns=""
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
-  >
-    <xs:element
-      name="NewDataSet"
-      msdata:IsDataSet="true"
-      msdata:UseCurrentLocale="true"
-      msdata:EnforceConstraints="False"
-    >
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"
+      msdata:EnforceConstraints="False">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="TransTable" msdata:Locale="">
@@ -53,7 +45,7 @@
       </xs:unique>
     </xs:element>
   </xs:schema>
-    <TransTable>
+  <TransTable>
     <Org>ООО Танып</Org>
     <IMEI>1000000532</IMEI>
     <Name>Погрузчик му2569</Name>
@@ -249,18 +241,21 @@
     <Org>ООО Танып</Org>
     <IMEI>1000000574</IMEI>
     <Name>Т150 6084му02 Омега</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>ООО Танып</Org>
     <IMEI>1000000577</IMEI>
     <Name>Т150 4825ун02 Омега</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>ООО Танып</Org>
     <IMEI>1000000579</IMEI>
     <Name>МТЗ 9128му02 Омега</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>ООО Танып</Org>
     <IMEI>1000000580</IMEI>
     <Name>МТЗ 5387мт02 Омега</Name>
@@ -374,108 +369,127 @@
     <Distance>0</Distance>
     <TimeOfWork>0</TimeOfWork>
   </TransTable>
-   <TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000592</IMEI>
     <Name>Грейдер 8896уе02</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
   <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000116</IMEI>
     <Name>Грейдер мт5383</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000383</IMEI>
     <Name>Пылесос 475хс</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000403</IMEI>
     <Name>Грейдер 5384мт02</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000122</IMEI>
     <Name>КАМАЗ в064тт102</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000463</IMEI>
     <Name>Газель а767оа</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000465</IMEI>
     <Name>МТЗ 2405мт02</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000466</IMEI>
     <Name>МТЗ 2406мт02</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000467</IMEI>
     <Name>МТЗ 2407мт02</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000485</IMEI>
     <Name>МТЗ 5376мт02</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000486</IMEI>
     <Name>УАЗ в384рм02</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000487</IMEI>
     <Name>МТЗ 5378мт02</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000488</IMEI>
     <Name>КАМАЗ а602ок702</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000489</IMEI>
     <Name>ГАЗ в479ве</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000490</IMEI>
     <Name>УАЗ с058со</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000491</IMEI>
     <Name>ЗИЛ в810ур02</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000492</IMEI>
     <Name>JCB 5379мт02</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000382</IMEI>
     <Name>КАМАЗ а885ха702</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000504</IMEI>
     <Name>КАМАЗ е429ар702</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000578</IMEI>
     <Name>УАЗ в384рм02</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000581</IMEI>
     <Name>УАЗ в871ск</Name>
@@ -533,33 +547,39 @@
     <Org>ООО Дельта-Н</Org>
     <IMEI>1000000565</IMEI>
     <Name>Камаз х500вм102</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>ООО Дельта-Н</Org>
     <IMEI>1000000566</IMEI>
     <Name>Погрузчик 1402ун02</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>ООО Дельта-Н</Org>
     <IMEI>1000000567</IMEI>
     <Name>Погрузчик 1429ун02</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>ООО Дельта-Н</Org>
     <IMEI>1000000568</IMEI>
     <Name>МАЗ е693кт702</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>ООО Дельта-Н</Org>
     <IMEI>1000000582</IMEI>
     <Name>МТЗ 1</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>ООО Дельта-Н</Org>
     <IMEI>1000000583</IMEI>
     <Name>МТЗ 2</Name>
-    <Icon>Tractor</Icon> </TransTable
-  ><TransTable>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
     <Org>ООО Дельта-Н</Org>
     <IMEI>1000000584</IMEI>
     <Name>МТЗ 2410мт02</Name>
