@@ -374,6 +374,12 @@
     <Distance>0</Distance>
     <TimeOfWork>0</TimeOfWork>
   </TransTable>
+   <TransTable>
+    <Org>МБУ СЧиП</Org>
+    <IMEI>1000000592</IMEI>
+    <Name>Грейдер 8896уе02</Name>
+    <Icon>Tractor</Icon> </TransTable
+  ><TransTable>
   <TransTable>
     <Org>МБУ СЧиП</Org>
     <IMEI>1000000116</IMEI>
