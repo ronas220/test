@@ -621,4 +621,10 @@
     <Name>КАМАЗ к458ву702</Name>
     <Icon>Tractor</Icon>
   </TransTable>
+   <TransTable>
+    <Org>ИП Хайретдинов</Org>
+    <IMEI>1000000676</IMEI>
+    <Name>МТЗ Ташкиново</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
 </NewDataSet>
