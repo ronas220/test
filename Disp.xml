@@ -600,7 +600,7 @@
   <TransTable>
     <Org>ИП Хайретдинов</Org>
     <IMEI>1000000582</IMEI>
-    <Name>МТЗ 1</Name>
+    <Name>КАМАЗ р312хв</Name>
     <Icon>Tractor</Icon>
   </TransTable>
   <TransTable>
@@ -621,10 +621,28 @@
     <Name>КАМАЗ к458ву702</Name>
     <Icon>Tractor</Icon>
   </TransTable>
-   <TransTable>
+  <TransTable>
     <Org>ИП Хайретдинов</Org>
     <IMEI>1000000676</IMEI>
     <Name>МТЗ Ташкиново</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>ИП Хайретдинов</Org>
+    <IMEI>1000000495</IMEI>
+    <Name>Камаз х854ет02</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>ИП Хайретдинов</Org>
+    <IMEI>1000000677</IMEI>
+    <Name>Камаз 1</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>ИП Хайретдинов</Org>
+    <IMEI>7043190064</IMEI>
+    <Name>МКСМ 800 му6443</Name>
     <Icon>Tractor</Icon>
   </TransTable>
 </NewDataSet>
