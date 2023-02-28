@@ -645,4 +645,10 @@
     <Name>МКСМ 800 му6443</Name>
     <Icon>Tractor</Icon>
   </TransTable>
+  <TransTable>
+    <Org>ИП Хайретдинов</Org>
+    <IMEI>1000000703</IMEI>
+    <Name>Камаз у427ко102</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
 </NewDataSet>
