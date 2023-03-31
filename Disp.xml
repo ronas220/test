@@ -377,6 +377,12 @@
   </TransTable>
   <TransTable>
     <Org>МБУ СЧиП</Org>
+    <IMEI>1000000582</IMEI>
+    <Name>КАМАЗ р312хв</Name>
+    <Icon>Tractor</Icon>
+  </TransTable>
+  <TransTable>
+    <Org>МБУ СЧиП</Org>
     <IMEI>1000000594</IMEI>
     <Name>Шевроле в880ет102</Name>
     <Icon>Tractor</Icon>
